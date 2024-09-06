@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "dotnot: DelegateTest build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "c:/git/cSharpSandbox/TestDelegates",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ]
+        },
+        {
+            "label": "dotnot: TestLing build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "c:/git/cSharpSandbox/TestLinq",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "dotnot: TestPokerHands build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "c:/git/cSharpSandbox/TestPokerHands",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
