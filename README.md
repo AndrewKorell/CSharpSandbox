@@ -1,3 +1,6 @@
+This a collection of tests, examples, and rapid prototypes that I add to occassionally. 
+
+
 ## adding a Nuget 
 
 while in the solution path 
