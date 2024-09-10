@@ -121,8 +121,8 @@ namespace TestPokerHand
             if(rank == 'T') return 10;
             if(rank == 'J') return 11;
             if(rank == 'Q') return 12;
-            if(rank == 'K') return 13;
-
+            if(rank == 'K') return;
+        
             throw new ArgumentOutOfRangeException("unknown Rank specified:" + rank);
         }
 
@@ -133,6 +133,7 @@ namespace TestPokerHand
             if(suit == 'D') return Suit.Diamonds;
             if(suit == 'S') return Suit.Spades;
 
+            //fatal error that ends program 
             throw new ArgumentOutOfRangeException("unknown Suit Specified: " + suit);
         }
 

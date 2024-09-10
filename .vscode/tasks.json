@@ -35,6 +35,18 @@
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "dotnot: PerfForVsForeach build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "c:/git/cSharpSandbox/PerfForVsForeach",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": []
+        },
     ]
 }

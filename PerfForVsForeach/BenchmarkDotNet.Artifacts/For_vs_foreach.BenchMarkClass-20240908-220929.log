@@ -1,0 +1,3613 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\obj\Release\net8.0/" /p:OutDir="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0/" /p:OutputPath="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0/" in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338
+// command took 4.19 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\obj\Release\net8.0/" /p:OutDir="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0/" /p:OutputPath="C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0/" --output "C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0/" in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338
+// command took 11.93 sec and exited with 0
+// ***** Done, took 00:00:16 (16.76 sec)   *****
+// Found 6 benchmarks:
+//   BenchMarkClass.MeasureA1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+//   BenchMarkClass.MeasureA2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+//   BenchMarkClass.MeasureB1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+//   BenchMarkClass.MeasureB2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+//   BenchMarkClass.MeasureC1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+//   BenchMarkClass.MeasureC2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureA1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1344 1400 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-LYZUTC(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 686100.00 ns, 686.1000 us/op
+WorkloadJitting  1: 1 op, 41071000.00 ns, 41.0710 ms/op
+
+WorkloadPilot    1: 2 op, 95250000.00 ns, 47.6250 ms/op
+WorkloadPilot    2: 3 op, 139154200.00 ns, 46.3847 ms/op
+WorkloadPilot    3: 4 op, 176199300.00 ns, 44.0498 ms/op
+WorkloadPilot    4: 5 op, 153348600.00 ns, 30.6697 ms/op
+WorkloadPilot    5: 6 op, 218814100.00 ns, 36.4690 ms/op
+WorkloadPilot    6: 7 op, 279895700.00 ns, 39.9851 ms/op
+WorkloadPilot    7: 8 op, 465359300.00 ns, 58.1699 ms/op
+WorkloadPilot    8: 9 op, 498756000.00 ns, 55.4173 ms/op
+WorkloadPilot    9: 10 op, 416643000.00 ns, 41.6643 ms/op
+WorkloadPilot   10: 11 op, 417364500.00 ns, 37.9422 ms/op
+WorkloadPilot   11: 12 op, 544799600.00 ns, 45.4000 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 12 op, 523896600.00 ns, 43.6581 ms/op
+WorkloadActual   2: 12 op, 586865300.00 ns, 48.9054 ms/op
+WorkloadActual   3: 12 op, 641288300.00 ns, 53.4407 ms/op
+WorkloadActual   4: 12 op, 651546500.00 ns, 54.2955 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 12 op, 523896600.00 ns, 43.6581 ms/op
+WorkloadResult   2: 12 op, 586865300.00 ns, 48.9054 ms/op
+WorkloadResult   3: 12 op, 641288300.00 ns, 53.4407 ms/op
+WorkloadResult   4: 12 op, 651546500.00 ns, 54.2955 ms/op
+
+// AfterAll
+// Benchmark Process 42544 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1248 1284 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-PUIWAA(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 296900.00 ns, 296.9000 us/op
+WorkloadJitting  1: 1 op, 28804000.00 ns, 28.8040 ms/op
+
+OverheadJitting  2: 16 op, 412900.00 ns, 25.8063 us/op
+WorkloadJitting  2: 16 op, 724212900.00 ns, 45.2633 ms/op
+
+WorkloadPilot    1: 16 op, 775045700.00 ns, 48.4404 ms/op
+
+OverheadWarmup   1: 16 op, 10800.00 ns, 675.0000 ns/op
+OverheadWarmup   2: 16 op, 1800.00 ns, 112.5000 ns/op
+OverheadWarmup   3: 16 op, 7300.00 ns, 456.2500 ns/op
+OverheadWarmup   4: 16 op, 2300.00 ns, 143.7500 ns/op
+OverheadWarmup   5: 16 op, 3500.00 ns, 218.7500 ns/op
+OverheadWarmup   6: 16 op, 2200.00 ns, 137.5000 ns/op
+
+OverheadActual   1: 16 op, 1600.00 ns, 100.0000 ns/op
+OverheadActual   2: 16 op, 3400.00 ns, 212.5000 ns/op
+OverheadActual   3: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadActual   4: 16 op, 3700.00 ns, 231.2500 ns/op
+OverheadActual   5: 16 op, 164200.00 ns, 10.2625 us/op
+OverheadActual   6: 16 op, 2700.00 ns, 168.7500 ns/op
+OverheadActual   7: 16 op, 3500.00 ns, 218.7500 ns/op
+OverheadActual   8: 16 op, 1800.00 ns, 112.5000 ns/op
+OverheadActual   9: 16 op, 2500.00 ns, 156.2500 ns/op
+OverheadActual  10: 16 op, 3500.00 ns, 218.7500 ns/op
+OverheadActual  11: 16 op, 1900.00 ns, 118.7500 ns/op
+OverheadActual  12: 16 op, 1700.00 ns, 106.2500 ns/op
+OverheadActual  13: 16 op, 2900.00 ns, 181.2500 ns/op
+OverheadActual  14: 16 op, 1900.00 ns, 118.7500 ns/op
+OverheadActual  15: 16 op, 1900.00 ns, 118.7500 ns/op
+OverheadActual  16: 16 op, 1700.00 ns, 106.2500 ns/op
+OverheadActual  17: 16 op, 1500.00 ns, 93.7500 ns/op
+OverheadActual  18: 16 op, 1500.00 ns, 93.7500 ns/op
+OverheadActual  19: 16 op, 1400.00 ns, 87.5000 ns/op
+OverheadActual  20: 16 op, 3500.00 ns, 218.7500 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 16 op, 687167400.00 ns, 42.9480 ms/op
+WorkloadActual   2: 16 op, 770444300.00 ns, 48.1528 ms/op
+WorkloadActual   3: 16 op, 847533100.00 ns, 52.9708 ms/op
+WorkloadActual   4: 16 op, 618509200.00 ns, 38.6568 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 16 op, 687165500.00 ns, 42.9478 ms/op
+WorkloadResult   2: 16 op, 770442400.00 ns, 48.1527 ms/op
+WorkloadResult   3: 16 op, 847531200.00 ns, 52.9707 ms/op
+WorkloadResult   4: 16 op, 618507300.00 ns, 38.6567 ms/op
+
+// AfterAll
+// Benchmark Process 40852 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1380 1332 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XSJSUS(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 346600.00 ns, 346.6000 us/op
+WorkloadJitting  1: 1 op, 49600800.00 ns, 49.6008 ms/op
+
+WorkloadPilot    1: 2 op, 90885600.00 ns, 45.4428 ms/op
+WorkloadPilot    2: 3 op, 163615800.00 ns, 54.5386 ms/op
+WorkloadPilot    3: 4 op, 188465800.00 ns, 47.1165 ms/op
+WorkloadPilot    4: 5 op, 243408600.00 ns, 48.6817 ms/op
+WorkloadPilot    5: 6 op, 242145100.00 ns, 40.3575 ms/op
+WorkloadPilot    6: 7 op, 355637600.00 ns, 50.8054 ms/op
+WorkloadPilot    7: 8 op, 370960800.00 ns, 46.3701 ms/op
+WorkloadPilot    8: 9 op, 446605600.00 ns, 49.6228 ms/op
+WorkloadPilot    9: 10 op, 511032100.00 ns, 51.1032 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 10 op, 501383200.00 ns, 50.1383 ms/op
+WorkloadActual   2: 10 op, 548830400.00 ns, 54.8830 ms/op
+WorkloadActual   3: 10 op, 448786800.00 ns, 44.8787 ms/op
+WorkloadActual   4: 10 op, 387515600.00 ns, 38.7516 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 10 op, 501383200.00 ns, 50.1383 ms/op
+WorkloadResult   2: 10 op, 548830400.00 ns, 54.8830 ms/op
+WorkloadResult   3: 10 op, 448786800.00 ns, 44.8787 ms/op
+WorkloadResult   4: 10 op, 387515600.00 ns, 38.7516 ms/op
+
+// AfterAll
+// Benchmark Process 36472 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1764 1748 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-REYMAO(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 494500.00 ns, 494.5000 us/op
+WorkloadJitting  1: 1 op, 58724000.00 ns, 58.7240 ms/op
+
+WorkloadPilot    1: 2 op, 119948900.00 ns, 59.9745 ms/op
+WorkloadPilot    2: 3 op, 183231300.00 ns, 61.0771 ms/op
+WorkloadPilot    3: 4 op, 218064500.00 ns, 54.5161 ms/op
+WorkloadPilot    4: 5 op, 288473600.00 ns, 57.6947 ms/op
+WorkloadPilot    5: 6 op, 350905800.00 ns, 58.4843 ms/op
+WorkloadPilot    6: 7 op, 358420600.00 ns, 51.2029 ms/op
+WorkloadPilot    7: 8 op, 351754400.00 ns, 43.9693 ms/op
+WorkloadPilot    8: 9 op, 448277800.00 ns, 49.8086 ms/op
+WorkloadPilot    9: 10 op, 414124900.00 ns, 41.4125 ms/op
+WorkloadPilot   10: 11 op, 501501900.00 ns, 45.5911 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 11 op, 497111300.00 ns, 45.1919 ms/op
+WorkloadActual   2: 11 op, 498504400.00 ns, 45.3186 ms/op
+WorkloadActual   3: 11 op, 455583500.00 ns, 41.4167 ms/op
+WorkloadActual   4: 11 op, 385038600.00 ns, 35.0035 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 11 op, 497111300.00 ns, 45.1919 ms/op
+WorkloadResult   2: 11 op, 498504400.00 ns, 45.3186 ms/op
+WorkloadResult   3: 11 op, 455583500.00 ns, 41.4167 ms/op
+WorkloadResult   4: 11 op, 385038600.00 ns, 35.0035 ms/op
+
+// AfterAll
+// Benchmark Process 38028 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1320 1708 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VCNRKV(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 251000.00 ns, 251.0000 us/op
+WorkloadJitting  1: 1 op, 55690600.00 ns, 55.6906 ms/op
+
+WorkloadPilot    1: 2 op, 125008100.00 ns, 62.5041 ms/op
+WorkloadPilot    2: 3 op, 205772100.00 ns, 68.5907 ms/op
+WorkloadPilot    3: 4 op, 214592700.00 ns, 53.6482 ms/op
+WorkloadPilot    4: 5 op, 283747700.00 ns, 56.7495 ms/op
+WorkloadPilot    5: 6 op, 270320200.00 ns, 45.0534 ms/op
+WorkloadPilot    6: 7 op, 307586300.00 ns, 43.9409 ms/op
+WorkloadPilot    7: 8 op, 353655600.00 ns, 44.2070 ms/op
+WorkloadPilot    8: 9 op, 425128500.00 ns, 47.2365 ms/op
+WorkloadPilot    9: 10 op, 459722300.00 ns, 45.9722 ms/op
+WorkloadPilot   10: 11 op, 559794300.00 ns, 50.8904 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 11 op, 425156000.00 ns, 38.6505 ms/op
+WorkloadActual   2: 11 op, 365721800.00 ns, 33.2474 ms/op
+WorkloadActual   3: 11 op, 389269600.00 ns, 35.3881 ms/op
+WorkloadActual   4: 11 op, 544918200.00 ns, 49.5380 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 11 op, 425156000.00 ns, 38.6505 ms/op
+WorkloadResult   2: 11 op, 365721800.00 ns, 33.2474 ms/op
+WorkloadResult   3: 11 op, 389269600.00 ns, 35.3881 ms/op
+WorkloadResult   4: 11 op, 544918200.00 ns, 49.5380 ms/op
+
+// AfterAll
+// Benchmark Process 33680 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1604 1672 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OVZNOM(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 519600.00 ns, 519.6000 us/op
+WorkloadJitting  1: 1 op, 54024500.00 ns, 54.0245 ms/op
+
+WorkloadPilot    1: 2 op, 139023200.00 ns, 69.5116 ms/op
+WorkloadPilot    2: 3 op, 199274000.00 ns, 66.4247 ms/op
+WorkloadPilot    3: 4 op, 251947100.00 ns, 62.9868 ms/op
+WorkloadPilot    4: 5 op, 336947500.00 ns, 67.3895 ms/op
+WorkloadPilot    5: 6 op, 414645600.00 ns, 69.1076 ms/op
+WorkloadPilot    6: 7 op, 483246300.00 ns, 69.0352 ms/op
+WorkloadPilot    7: 8 op, 467731600.00 ns, 58.4665 ms/op
+WorkloadPilot    8: 9 op, 573363900.00 ns, 63.7071 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 9 op, 538536200.00 ns, 59.8374 ms/op
+WorkloadActual   2: 9 op, 639157400.00 ns, 71.0175 ms/op
+WorkloadActual   3: 9 op, 599401400.00 ns, 66.6002 ms/op
+WorkloadActual   4: 9 op, 476877200.00 ns, 52.9864 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 9 op, 538536200.00 ns, 59.8374 ms/op
+WorkloadResult   2: 9 op, 639157400.00 ns, 71.0175 ms/op
+WorkloadResult   3: 9 op, 599401400.00 ns, 66.6002 ms/op
+WorkloadResult   4: 9 op, 476877200.00 ns, 52.9864 ms/op
+
+// AfterAll
+// Benchmark Process 36508 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1704 1412 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-EUOWKP(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 415500.00 ns, 415.5000 us/op
+WorkloadJitting  1: 1 op, 63488100.00 ns, 63.4881 ms/op
+
+WorkloadPilot    1: 2 op, 126914100.00 ns, 63.4571 ms/op
+WorkloadPilot    2: 3 op, 192709600.00 ns, 64.2365 ms/op
+WorkloadPilot    3: 4 op, 259486600.00 ns, 64.8717 ms/op
+WorkloadPilot    4: 5 op, 305436900.00 ns, 61.0874 ms/op
+WorkloadPilot    5: 6 op, 349608600.00 ns, 58.2681 ms/op
+WorkloadPilot    6: 7 op, 411194900.00 ns, 58.7421 ms/op
+WorkloadPilot    7: 8 op, 529552800.00 ns, 66.1941 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 8 op, 399864700.00 ns, 49.9831 ms/op
+WorkloadActual   2: 8 op, 474036400.00 ns, 59.2546 ms/op
+WorkloadActual   3: 8 op, 481274300.00 ns, 60.1593 ms/op
+WorkloadActual   4: 8 op, 456664300.00 ns, 57.0830 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 8 op, 399864700.00 ns, 49.9831 ms/op
+WorkloadResult   2: 8 op, 474036400.00 ns, 59.2546 ms/op
+WorkloadResult   3: 8 op, 481274300.00 ns, 60.1593 ms/op
+WorkloadResult   4: 8 op, 456664300.00 ns, 57.0830 ms/op
+
+// AfterAll
+// Benchmark Process 17460 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1748 1388 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-COZCYJ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 368800.00 ns, 368.8000 us/op
+WorkloadJitting  1: 1 op, 56823700.00 ns, 56.8237 ms/op
+
+WorkloadPilot    1: 2 op, 114507700.00 ns, 57.2539 ms/op
+WorkloadPilot    2: 3 op, 170704300.00 ns, 56.9014 ms/op
+WorkloadPilot    3: 4 op, 266614700.00 ns, 66.6537 ms/op
+WorkloadPilot    4: 5 op, 301109100.00 ns, 60.2218 ms/op
+WorkloadPilot    5: 6 op, 337127700.00 ns, 56.1880 ms/op
+WorkloadPilot    6: 7 op, 410301300.00 ns, 58.6145 ms/op
+WorkloadPilot    7: 8 op, 472471100.00 ns, 59.0589 ms/op
+WorkloadPilot    8: 9 op, 532560600.00 ns, 59.1734 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 9 op, 530057600.00 ns, 58.8953 ms/op
+WorkloadActual   2: 9 op, 547453700.00 ns, 60.8282 ms/op
+WorkloadActual   3: 9 op, 515376400.00 ns, 57.2640 ms/op
+WorkloadActual   4: 9 op, 476596800.00 ns, 52.9552 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 9 op, 530057600.00 ns, 58.8953 ms/op
+WorkloadResult   2: 9 op, 547453700.00 ns, 60.8282 ms/op
+WorkloadResult   3: 9 op, 515376400.00 ns, 57.2640 ms/op
+WorkloadResult   4: 9 op, 476596800.00 ns, 52.9552 ms/op
+
+// AfterAll
+// Benchmark Process 41992 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1288 1704 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VRFUMF(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 365200.00 ns, 365.2000 us/op
+WorkloadJitting  1: 1 op, 65516800.00 ns, 65.5168 ms/op
+
+WorkloadPilot    1: 2 op, 105791800.00 ns, 52.8959 ms/op
+WorkloadPilot    2: 3 op, 161281300.00 ns, 53.7604 ms/op
+WorkloadPilot    3: 4 op, 286855400.00 ns, 71.7139 ms/op
+WorkloadPilot    4: 5 op, 339402300.00 ns, 67.8805 ms/op
+WorkloadPilot    5: 6 op, 365235100.00 ns, 60.8725 ms/op
+WorkloadPilot    6: 7 op, 418712200.00 ns, 59.8160 ms/op
+WorkloadPilot    7: 8 op, 615666900.00 ns, 76.9584 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 8 op, 502917400.00 ns, 62.8647 ms/op
+WorkloadActual   2: 8 op, 523631800.00 ns, 65.4540 ms/op
+WorkloadActual   3: 8 op, 452702900.00 ns, 56.5879 ms/op
+WorkloadActual   4: 8 op, 318944500.00 ns, 39.8681 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 8 op, 502917400.00 ns, 62.8647 ms/op
+WorkloadResult   2: 8 op, 523631800.00 ns, 65.4540 ms/op
+WorkloadResult   3: 8 op, 452702900.00 ns, 56.5879 ms/op
+WorkloadResult   4: 8 op, 318944500.00 ns, 39.8681 ms/op
+
+// AfterAll
+// Benchmark Process 24996 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1260 1288 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 0 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-FNAQOJ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 357500.00 ns, 357.5000 us/op
+WorkloadJitting  1: 1 op, 63298500.00 ns, 63.2985 ms/op
+
+WorkloadPilot    1: 2 op, 132542100.00 ns, 66.2711 ms/op
+WorkloadPilot    2: 3 op, 201414600.00 ns, 67.1382 ms/op
+WorkloadPilot    3: 4 op, 252721100.00 ns, 63.1803 ms/op
+WorkloadPilot    4: 5 op, 358054600.00 ns, 71.6109 ms/op
+WorkloadPilot    5: 6 op, 403937700.00 ns, 67.3230 ms/op
+WorkloadPilot    6: 7 op, 441187900.00 ns, 63.0268 ms/op
+WorkloadPilot    7: 8 op, 483702600.00 ns, 60.4628 ms/op
+WorkloadPilot    8: 9 op, 534652700.00 ns, 59.4059 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 9 op, 550801500.00 ns, 61.2002 ms/op
+WorkloadActual   2: 9 op, 589831700.00 ns, 65.5369 ms/op
+WorkloadActual   3: 9 op, 570722100.00 ns, 63.4136 ms/op
+WorkloadActual   4: 9 op, 576860500.00 ns, 64.0956 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 9 op, 550801500.00 ns, 61.2002 ms/op
+WorkloadResult   2: 9 op, 589831700.00 ns, 65.5369 ms/op
+WorkloadResult   3: 9 op, 570722100.00 ns, 63.4136 ms/op
+WorkloadResult   4: 9 op, 576860500.00 ns, 64.0956 ms/op
+
+// AfterAll
+// Benchmark Process 27220 has exited with code 0.
+
+Mean = 52.033 ms, StdErr = 1.572 ms (3.02%), N = 40, StdDev = 9.944 ms
+Min = 33.247 ms, Q1 = 44.574 ms, Median = 52.979 ms, Q3 = 59.918 ms, Max = 71.017 ms
+IQR = 15.344 ms, LowerFence = 21.557 ms, UpperFence = 82.934 ms
+ConfidenceInterval = [46.439 ms; 57.627 ms] (CI 99.9%), Margin = 5.594 ms (10.75% of Mean)
+Skewness = -0.15, Kurtosis = 1.93, MValue = 2.77
+
+// ** Remained 5 (83.3%) benchmark(s) to run. Estimated finish 2024-09-08 22:36 (0h 22m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureA2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1260 1288 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-LIMVKP(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 839200.00 ns, 839.2000 us/op
+WorkloadJitting  1: 1 op, 127223300.00 ns, 127.2233 ms/op
+
+WorkloadPilot    1: 2 op, 232300300.00 ns, 116.1502 ms/op
+WorkloadPilot    2: 3 op, 222831400.00 ns, 74.2771 ms/op
+WorkloadPilot    3: 4 op, 480829000.00 ns, 120.2073 ms/op
+WorkloadPilot    4: 5 op, 664455000.00 ns, 132.8910 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 5 op, 582319400.00 ns, 116.4639 ms/op
+WorkloadActual   2: 5 op, 507483300.00 ns, 101.4967 ms/op
+WorkloadActual   3: 5 op, 504633500.00 ns, 100.9267 ms/op
+WorkloadActual   4: 5 op, 532449700.00 ns, 106.4899 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 5 op, 582319400.00 ns, 116.4639 ms/op
+WorkloadResult   2: 5 op, 507483300.00 ns, 101.4967 ms/op
+WorkloadResult   3: 5 op, 504633500.00 ns, 100.9267 ms/op
+WorkloadResult   4: 5 op, 532449700.00 ns, 106.4899 ms/op
+
+// AfterAll
+// Benchmark Process 38104 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1440 1368 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OHFQVC(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 364700.00 ns, 364.7000 us/op
+WorkloadJitting  1: 1 op, 97762000.00 ns, 97.7620 ms/op
+
+WorkloadPilot    1: 2 op, 241932800.00 ns, 120.9664 ms/op
+WorkloadPilot    2: 3 op, 331490300.00 ns, 110.4968 ms/op
+WorkloadPilot    3: 4 op, 393966700.00 ns, 98.4917 ms/op
+WorkloadPilot    4: 5 op, 369920200.00 ns, 73.9840 ms/op
+WorkloadPilot    5: 6 op, 648217700.00 ns, 108.0363 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 6 op, 738935900.00 ns, 123.1560 ms/op
+WorkloadActual   2: 6 op, 602211100.00 ns, 100.3685 ms/op
+WorkloadActual   3: 6 op, 682562500.00 ns, 113.7604 ms/op
+WorkloadActual   4: 6 op, 694592800.00 ns, 115.7655 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 6 op, 738935900.00 ns, 123.1560 ms/op
+WorkloadResult   2: 6 op, 602211100.00 ns, 100.3685 ms/op
+WorkloadResult   3: 6 op, 682562500.00 ns, 113.7604 ms/op
+WorkloadResult   4: 6 op, 694592800.00 ns, 115.7655 ms/op
+
+// AfterAll
+// Benchmark Process 41276 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1436 1460 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-DUXHJV(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 233500.00 ns, 233.5000 us/op
+WorkloadJitting  1: 1 op, 114940800.00 ns, 114.9408 ms/op
+
+WorkloadPilot    1: 2 op, 224464300.00 ns, 112.2322 ms/op
+WorkloadPilot    2: 3 op, 295326000.00 ns, 98.4420 ms/op
+WorkloadPilot    3: 4 op, 570063700.00 ns, 142.5159 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 483867700.00 ns, 120.9669 ms/op
+WorkloadActual   2: 4 op, 466249400.00 ns, 116.5624 ms/op
+WorkloadActual   3: 4 op, 495616400.00 ns, 123.9041 ms/op
+WorkloadActual   4: 4 op, 447403000.00 ns, 111.8508 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 483867700.00 ns, 120.9669 ms/op
+WorkloadResult   2: 4 op, 466249400.00 ns, 116.5624 ms/op
+WorkloadResult   3: 4 op, 495616400.00 ns, 123.9041 ms/op
+WorkloadResult   4: 4 op, 447403000.00 ns, 111.8508 ms/op
+
+// AfterAll
+// Benchmark Process 19336 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1436 1460 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-WSZWEH(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 353600.00 ns, 353.6000 us/op
+WorkloadJitting  1: 1 op, 132181800.00 ns, 132.1818 ms/op
+
+WorkloadPilot    1: 2 op, 238744200.00 ns, 119.3721 ms/op
+WorkloadPilot    2: 3 op, 371426400.00 ns, 123.8088 ms/op
+WorkloadPilot    3: 4 op, 366820900.00 ns, 91.7052 ms/op
+WorkloadPilot    4: 5 op, 481496900.00 ns, 96.2994 ms/op
+WorkloadPilot    5: 6 op, 426419000.00 ns, 71.0698 ms/op
+WorkloadPilot    6: 7 op, 796561100.00 ns, 113.7944 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 873937800.00 ns, 124.8483 ms/op
+WorkloadActual   2: 7 op, 712584300.00 ns, 101.7978 ms/op
+WorkloadActual   3: 7 op, 786081600.00 ns, 112.2974 ms/op
+WorkloadActual   4: 7 op, 694170300.00 ns, 99.1672 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 873937800.00 ns, 124.8483 ms/op
+WorkloadResult   2: 7 op, 712584300.00 ns, 101.7978 ms/op
+WorkloadResult   3: 7 op, 786081600.00 ns, 112.2974 ms/op
+WorkloadResult   4: 7 op, 694170300.00 ns, 99.1672 ms/op
+
+// AfterAll
+// Benchmark Process 36152 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1220 1892 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CMPLZK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 235200.00 ns, 235.2000 us/op
+WorkloadJitting  1: 1 op, 126061400.00 ns, 126.0614 ms/op
+
+WorkloadPilot    1: 2 op, 246578300.00 ns, 123.2892 ms/op
+WorkloadPilot    2: 3 op, 272971200.00 ns, 90.9904 ms/op
+WorkloadPilot    3: 4 op, 460419400.00 ns, 115.1049 ms/op
+WorkloadPilot    4: 5 op, 433538100.00 ns, 86.7076 ms/op
+WorkloadPilot    5: 6 op, 452422800.00 ns, 75.4038 ms/op
+WorkloadPilot    6: 7 op, 880577900.00 ns, 125.7968 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 965843600.00 ns, 137.9777 ms/op
+WorkloadActual   2: 7 op, 879419700.00 ns, 125.6314 ms/op
+WorkloadActual   3: 7 op, 904049600.00 ns, 129.1499 ms/op
+WorkloadActual   4: 7 op, 986652900.00 ns, 140.9504 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 965843600.00 ns, 137.9777 ms/op
+WorkloadResult   2: 7 op, 879419700.00 ns, 125.6314 ms/op
+WorkloadResult   3: 7 op, 904049600.00 ns, 129.1499 ms/op
+WorkloadResult   4: 7 op, 986652900.00 ns, 140.9504 ms/op
+
+// AfterAll
+// Benchmark Process 21300 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1436 1684 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ISQNEA(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 611800.00 ns, 611.8000 us/op
+WorkloadJitting  1: 1 op, 150177000.00 ns, 150.1770 ms/op
+
+WorkloadPilot    1: 2 op, 282418800.00 ns, 141.2094 ms/op
+WorkloadPilot    2: 3 op, 420208400.00 ns, 140.0695 ms/op
+WorkloadPilot    3: 4 op, 552294800.00 ns, 138.0737 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 536050800.00 ns, 134.0127 ms/op
+WorkloadActual   2: 4 op, 523482800.00 ns, 130.8707 ms/op
+WorkloadActual   3: 4 op, 540093000.00 ns, 135.0233 ms/op
+WorkloadActual   4: 4 op, 532649400.00 ns, 133.1624 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 536050800.00 ns, 134.0127 ms/op
+WorkloadResult   2: 4 op, 523482800.00 ns, 130.8707 ms/op
+WorkloadResult   3: 4 op, 540093000.00 ns, 135.0233 ms/op
+WorkloadResult   4: 4 op, 532649400.00 ns, 133.1624 ms/op
+
+// AfterAll
+// Benchmark Process 38940 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1252 1436 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-MPQCRW(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 385500.00 ns, 385.5000 us/op
+WorkloadJitting  1: 1 op, 138300000.00 ns, 138.3000 ms/op
+
+WorkloadPilot    1: 2 op, 272339100.00 ns, 136.1696 ms/op
+WorkloadPilot    2: 3 op, 416346800.00 ns, 138.7823 ms/op
+WorkloadPilot    3: 4 op, 538305700.00 ns, 134.5764 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 550701800.00 ns, 137.6755 ms/op
+WorkloadActual   2: 4 op, 534945100.00 ns, 133.7363 ms/op
+WorkloadActual   3: 4 op, 533281100.00 ns, 133.3203 ms/op
+WorkloadActual   4: 4 op, 527505500.00 ns, 131.8764 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 534945100.00 ns, 133.7363 ms/op
+WorkloadResult   2: 4 op, 533281100.00 ns, 133.3203 ms/op
+WorkloadResult   3: 4 op, 527505500.00 ns, 131.8764 ms/op
+
+// AfterAll
+// Benchmark Process 41064 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1240 1444 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-MZPDDX(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 372900.00 ns, 372.9000 us/op
+WorkloadJitting  1: 1 op, 144533400.00 ns, 144.5334 ms/op
+
+WorkloadPilot    1: 2 op, 273060400.00 ns, 136.5302 ms/op
+WorkloadPilot    2: 3 op, 410424300.00 ns, 136.8081 ms/op
+WorkloadPilot    3: 4 op, 531317900.00 ns, 132.8295 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 558061200.00 ns, 139.5153 ms/op
+WorkloadActual   2: 4 op, 525583800.00 ns, 131.3960 ms/op
+WorkloadActual   3: 4 op, 553613800.00 ns, 138.4035 ms/op
+WorkloadActual   4: 4 op, 539649500.00 ns, 134.9124 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 558061200.00 ns, 139.5153 ms/op
+WorkloadResult   2: 4 op, 525583800.00 ns, 131.3960 ms/op
+WorkloadResult   3: 4 op, 553613800.00 ns, 138.4035 ms/op
+WorkloadResult   4: 4 op, 539649500.00 ns, 134.9124 ms/op
+
+// AfterAll
+// Benchmark Process 31748 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1908 1948 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CNRJRG(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 379300.00 ns, 379.3000 us/op
+WorkloadJitting  1: 1 op, 124689700.00 ns, 124.6897 ms/op
+
+WorkloadPilot    1: 2 op, 263594900.00 ns, 131.7975 ms/op
+WorkloadPilot    2: 3 op, 413457000.00 ns, 137.8190 ms/op
+WorkloadPilot    3: 4 op, 525481300.00 ns, 131.3703 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 539427400.00 ns, 134.8569 ms/op
+WorkloadActual   2: 4 op, 543923300.00 ns, 135.9808 ms/op
+WorkloadActual   3: 4 op, 541406400.00 ns, 135.3516 ms/op
+WorkloadActual   4: 4 op, 538288900.00 ns, 134.5722 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 539427400.00 ns, 134.8569 ms/op
+WorkloadResult   2: 4 op, 543923300.00 ns, 135.9808 ms/op
+WorkloadResult   3: 4 op, 541406400.00 ns, 135.3516 ms/op
+WorkloadResult   4: 4 op, 538288900.00 ns, 134.5722 ms/op
+
+// AfterAll
+// Benchmark Process 38360 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1340 1420 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureA2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 1 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-TREBUM(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 404400.00 ns, 404.4000 us/op
+WorkloadJitting  1: 1 op, 130283700.00 ns, 130.2837 ms/op
+
+WorkloadPilot    1: 2 op, 262777500.00 ns, 131.3888 ms/op
+WorkloadPilot    2: 3 op, 405217300.00 ns, 135.0724 ms/op
+WorkloadPilot    3: 4 op, 537340300.00 ns, 134.3351 ms/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 4 op, 541789700.00 ns, 135.4474 ms/op
+WorkloadActual   2: 4 op, 603636900.00 ns, 150.9092 ms/op
+WorkloadActual   3: 4 op, 520134500.00 ns, 130.0336 ms/op
+WorkloadActual   4: 4 op, 542238500.00 ns, 135.5596 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 4 op, 541789700.00 ns, 135.4474 ms/op
+WorkloadResult   2: 4 op, 520134500.00 ns, 130.0336 ms/op
+WorkloadResult   3: 4 op, 542238500.00 ns, 135.5596 ms/op
+
+// AfterAll
+// Benchmark Process 38084 has exited with code 0.
+
+Mean = 124.778 ms, StdErr = 2.084 ms (1.67%), N = 38, StdDev = 12.844 ms
+Min = 99.167 ms, Q1 = 115.940 ms, Median = 130.452 ms, Q3 = 134.898 ms, Max = 140.950 ms
+IQR = 18.958 ms, LowerFence = 87.502 ms, UpperFence = 163.336 ms
+ConfidenceInterval = [117.332 ms; 132.224 ms] (CI 99.9%), Margin = 7.446 ms (5.97% of Mean)
+Skewness = -0.72, Kurtosis = 2.11, MValue = 2.32
+
+// ** Remained 4 (66.7%) benchmark(s) to run. Estimated finish 2024-09-08 22:32 (0h 15m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureB1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1932 1264 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CGZVPK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 368900.00 ns, 368.9000 us/op
+WorkloadJitting  1: 1 op, 14002900.00 ns, 14.0029 ms/op
+
+OverheadJitting  2: 16 op, 380600.00 ns, 23.7875 us/op
+WorkloadJitting  2: 16 op, 190036000.00 ns, 11.8773 ms/op
+
+WorkloadPilot    1: 16 op, 198840100.00 ns, 12.4275 ms/op
+WorkloadPilot    2: 32 op, 343216300.00 ns, 10.7255 ms/op
+WorkloadPilot    3: 64 op, 966776100.00 ns, 15.1059 ms/op
+
+OverheadWarmup   1: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadWarmup   2: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadWarmup   3: 64 op, 5700.00 ns, 89.0625 ns/op
+OverheadWarmup   4: 64 op, 6100.00 ns, 95.3125 ns/op
+OverheadWarmup   5: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   6: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadWarmup   7: 64 op, 4300.00 ns, 67.1875 ns/op
+OverheadWarmup   8: 64 op, 3500.00 ns, 54.6875 ns/op
+
+OverheadActual   1: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   2: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   3: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   4: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual   5: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   6: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   7: 64 op, 8000.00 ns, 125.0000 ns/op
+OverheadActual   8: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual   9: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual  10: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  11: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  12: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  13: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual  14: 64 op, 2900.00 ns, 45.3125 ns/op
+OverheadActual  15: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  16: 64 op, 3000.00 ns, 46.8750 ns/op
+OverheadActual  17: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  18: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual  19: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  20: 64 op, 1700.00 ns, 26.5625 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 995393100.00 ns, 15.5530 ms/op
+WorkloadActual   2: 64 op, 1111311400.00 ns, 17.3642 ms/op
+WorkloadActual   3: 64 op, 921802600.00 ns, 14.4032 ms/op
+WorkloadActual   4: 64 op, 997993200.00 ns, 15.5936 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 995390900.00 ns, 15.5530 ms/op
+WorkloadResult   2: 64 op, 921800400.00 ns, 14.4031 ms/op
+WorkloadResult   3: 64 op, 997991000.00 ns, 15.5936 ms/op
+
+// AfterAll
+// Benchmark Process 40276 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1932 1952 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-SYSZES(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 455100.00 ns, 455.1000 us/op
+WorkloadJitting  1: 1 op, 12713100.00 ns, 12.7131 ms/op
+
+OverheadJitting  2: 16 op, 540600.00 ns, 33.7875 us/op
+WorkloadJitting  2: 16 op, 185089900.00 ns, 11.5681 ms/op
+
+WorkloadPilot    1: 16 op, 196264000.00 ns, 12.2665 ms/op
+WorkloadPilot    2: 32 op, 332364900.00 ns, 10.3864 ms/op
+WorkloadPilot    3: 64 op, 849236400.00 ns, 13.2693 ms/op
+
+OverheadWarmup   1: 64 op, 5600.00 ns, 87.5000 ns/op
+OverheadWarmup   2: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadWarmup   3: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   4: 64 op, 9300.00 ns, 145.3125 ns/op
+OverheadWarmup   5: 64 op, 4000.00 ns, 62.5000 ns/op
+OverheadWarmup   6: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadWarmup   7: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   8: 64 op, 5100.00 ns, 79.6875 ns/op
+OverheadWarmup   9: 64 op, 2500.00 ns, 39.0625 ns/op
+
+OverheadActual   1: 64 op, 4700.00 ns, 73.4375 ns/op
+OverheadActual   2: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   3: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   4: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual   5: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual   6: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   7: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual   8: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   9: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  10: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  11: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  12: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  13: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  14: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual  15: 64 op, 4700.00 ns, 73.4375 ns/op
+OverheadActual  16: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual  17: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  18: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  19: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  20: 64 op, 2300.00 ns, 35.9375 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 852898700.00 ns, 13.3265 ms/op
+WorkloadActual   2: 64 op, 935339600.00 ns, 14.6147 ms/op
+WorkloadActual   3: 64 op, 929681100.00 ns, 14.5263 ms/op
+WorkloadActual   4: 64 op, 996283800.00 ns, 15.5669 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 852896400.00 ns, 13.3265 ms/op
+WorkloadResult   2: 64 op, 935337300.00 ns, 14.6146 ms/op
+WorkloadResult   3: 64 op, 929678800.00 ns, 14.5262 ms/op
+WorkloadResult   4: 64 op, 996281500.00 ns, 15.5669 ms/op
+
+// AfterAll
+// Benchmark Process 31044 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1940 1960 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-KUWGTE(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 372600.00 ns, 372.6000 us/op
+WorkloadJitting  1: 1 op, 11179100.00 ns, 11.1791 ms/op
+
+OverheadJitting  2: 16 op, 588700.00 ns, 36.7938 us/op
+WorkloadJitting  2: 16 op, 189789300.00 ns, 11.8618 ms/op
+
+WorkloadPilot    1: 16 op, 181282200.00 ns, 11.3301 ms/op
+WorkloadPilot    2: 32 op, 367685200.00 ns, 11.4902 ms/op
+WorkloadPilot    3: 64 op, 1003013600.00 ns, 15.6721 ms/op
+
+OverheadWarmup   1: 64 op, 11500.00 ns, 179.6875 ns/op
+OverheadWarmup   2: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadWarmup   3: 64 op, 10700.00 ns, 167.1875 ns/op
+OverheadWarmup   4: 64 op, 4600.00 ns, 71.8750 ns/op
+OverheadWarmup   5: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadWarmup   6: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   7: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadWarmup   8: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadWarmup   9: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadWarmup  10: 64 op, 2300.00 ns, 35.9375 ns/op
+
+OverheadActual   1: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadActual   2: 64 op, 5200.00 ns, 81.2500 ns/op
+OverheadActual   3: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual   4: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual   5: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual   6: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadActual   7: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   8: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   9: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  10: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  11: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  12: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  13: 64 op, 3300.00 ns, 51.5625 ns/op
+OverheadActual  14: 64 op, 3300.00 ns, 51.5625 ns/op
+OverheadActual  15: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  16: 64 op, 4200.00 ns, 65.6250 ns/op
+OverheadActual  17: 64 op, 4000.00 ns, 62.5000 ns/op
+OverheadActual  18: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadActual  19: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  20: 64 op, 1900.00 ns, 29.6875 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 956379200.00 ns, 14.9434 ms/op
+WorkloadActual   2: 64 op, 1067163800.00 ns, 16.6744 ms/op
+WorkloadActual   3: 64 op, 936725900.00 ns, 14.6363 ms/op
+WorkloadActual   4: 64 op, 956981500.00 ns, 14.9528 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 956376500.00 ns, 14.9434 ms/op
+WorkloadResult   2: 64 op, 936723200.00 ns, 14.6363 ms/op
+WorkloadResult   3: 64 op, 956978800.00 ns, 14.9528 ms/op
+
+// AfterAll
+// Benchmark Process 38816 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 652 1932 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VGLRFG(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 351500.00 ns, 351.5000 us/op
+WorkloadJitting  1: 1 op, 12227300.00 ns, 12.2273 ms/op
+
+OverheadJitting  2: 16 op, 487200.00 ns, 30.4500 us/op
+WorkloadJitting  2: 16 op, 171943800.00 ns, 10.7465 ms/op
+
+WorkloadPilot    1: 16 op, 179685000.00 ns, 11.2303 ms/op
+WorkloadPilot    2: 32 op, 384129600.00 ns, 12.0041 ms/op
+WorkloadPilot    3: 64 op, 970425800.00 ns, 15.1629 ms/op
+
+OverheadWarmup   1: 64 op, 7300.00 ns, 114.0625 ns/op
+OverheadWarmup   2: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   3: 64 op, 10500.00 ns, 164.0625 ns/op
+OverheadWarmup   4: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadWarmup   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   7: 64 op, 1800.00 ns, 28.1250 ns/op
+
+OverheadActual   1: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual   2: 64 op, 317100.00 ns, 4.9547 us/op
+OverheadActual   3: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual   4: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   5: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   6: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual   7: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadActual   8: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual   9: 64 op, 13400.00 ns, 209.3750 ns/op
+OverheadActual  10: 64 op, 4300.00 ns, 67.1875 ns/op
+OverheadActual  11: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual  12: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  13: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadActual  14: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual  15: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  16: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  17: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual  18: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  19: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  20: 64 op, 2500.00 ns, 39.0625 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 993883600.00 ns, 15.5294 ms/op
+WorkloadActual   2: 64 op, 1092455200.00 ns, 17.0696 ms/op
+WorkloadActual   3: 64 op, 838720100.00 ns, 13.1050 ms/op
+WorkloadActual   4: 64 op, 911577100.00 ns, 14.2434 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 993881050.00 ns, 15.5294 ms/op
+WorkloadResult   2: 64 op, 1092452650.00 ns, 17.0696 ms/op
+WorkloadResult   3: 64 op, 838717550.00 ns, 13.1050 ms/op
+WorkloadResult   4: 64 op, 911574550.00 ns, 14.2434 ms/op
+
+// AfterAll
+// Benchmark Process 29016 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1684 1728 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-VJEUIN(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 439800.00 ns, 439.8000 us/op
+WorkloadJitting  1: 1 op, 11879700.00 ns, 11.8797 ms/op
+
+OverheadJitting  2: 16 op, 584700.00 ns, 36.5438 us/op
+WorkloadJitting  2: 16 op, 143664000.00 ns, 8.9790 ms/op
+
+WorkloadPilot    1: 16 op, 180996800.00 ns, 11.3123 ms/op
+WorkloadPilot    2: 32 op, 362259300.00 ns, 11.3206 ms/op
+WorkloadPilot    3: 64 op, 914492200.00 ns, 14.2889 ms/op
+
+OverheadWarmup   1: 64 op, 5800.00 ns, 90.6250 ns/op
+OverheadWarmup   2: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadWarmup   3: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadWarmup   4: 64 op, 5900.00 ns, 92.1875 ns/op
+OverheadWarmup   5: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadWarmup   6: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadWarmup   7: 64 op, 3300.00 ns, 51.5625 ns/op
+OverheadWarmup   8: 64 op, 4100.00 ns, 64.0625 ns/op
+OverheadWarmup   9: 64 op, 2900.00 ns, 45.3125 ns/op
+
+OverheadActual   1: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   2: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   3: 64 op, 3000.00 ns, 46.8750 ns/op
+OverheadActual   4: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   5: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   6: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   7: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   8: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadActual   9: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  10: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual  11: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  12: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadActual  13: 64 op, 4200.00 ns, 65.6250 ns/op
+OverheadActual  14: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  15: 64 op, 6800.00 ns, 106.2500 ns/op
+OverheadActual  16: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  17: 64 op, 2900.00 ns, 45.3125 ns/op
+OverheadActual  18: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual  19: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  20: 64 op, 6000.00 ns, 93.7500 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 1093303200.00 ns, 17.0829 ms/op
+WorkloadActual   2: 64 op, 898066400.00 ns, 14.0323 ms/op
+WorkloadActual   3: 64 op, 957604200.00 ns, 14.9626 ms/op
+WorkloadActual   4: 64 op, 930442000.00 ns, 14.5382 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 1093300800.00 ns, 17.0828 ms/op
+WorkloadResult   2: 64 op, 898064000.00 ns, 14.0323 ms/op
+WorkloadResult   3: 64 op, 957601800.00 ns, 14.9625 ms/op
+WorkloadResult   4: 64 op, 930439600.00 ns, 14.5381 ms/op
+
+// AfterAll
+// Benchmark Process 38220 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1904 1900 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-SNFCKA(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 263600.00 ns, 263.6000 us/op
+WorkloadJitting  1: 1 op, 12378900.00 ns, 12.3789 ms/op
+
+OverheadJitting  2: 16 op, 411600.00 ns, 25.7250 us/op
+WorkloadJitting  2: 16 op, 117109400.00 ns, 7.3193 ms/op
+
+WorkloadPilot    1: 16 op, 180031300.00 ns, 11.2520 ms/op
+WorkloadPilot    2: 32 op, 274724800.00 ns, 8.5852 ms/op
+WorkloadPilot    3: 64 op, 813295100.00 ns, 12.7077 ms/op
+
+OverheadWarmup   1: 64 op, 4000.00 ns, 62.5000 ns/op
+OverheadWarmup   2: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   3: 64 op, 5200.00 ns, 81.2500 ns/op
+OverheadWarmup   4: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadWarmup   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 64 op, 1300.00 ns, 20.3125 ns/op
+OverheadWarmup   7: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   8: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadWarmup   9: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadWarmup  10: 64 op, 3000.00 ns, 46.8750 ns/op
+
+OverheadActual   1: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   2: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   3: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual   4: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual   5: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadActual   6: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   7: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadActual   8: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   9: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual  10: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  11: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  12: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  13: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  14: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  15: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  16: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  17: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  18: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadActual  19: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  20: 64 op, 4100.00 ns, 64.0625 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 810601600.00 ns, 12.6657 ms/op
+WorkloadActual   2: 64 op, 547264700.00 ns, 8.5510 ms/op
+WorkloadActual   3: 64 op, 605531400.00 ns, 9.4614 ms/op
+WorkloadActual   4: 64 op, 608714500.00 ns, 9.5112 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 547262700.00 ns, 8.5510 ms/op
+WorkloadResult   2: 64 op, 605529400.00 ns, 9.4614 ms/op
+WorkloadResult   3: 64 op, 608712500.00 ns, 9.5111 ms/op
+
+// AfterAll
+// Benchmark Process 35388 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1440 1368 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-HBJKVS(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 300100.00 ns, 300.1000 us/op
+WorkloadJitting  1: 1 op, 13340000.00 ns, 13.3400 ms/op
+
+OverheadJitting  2: 16 op, 232300.00 ns, 14.5188 us/op
+WorkloadJitting  2: 16 op, 131600900.00 ns, 8.2251 ms/op
+
+WorkloadPilot    1: 16 op, 190938400.00 ns, 11.9337 ms/op
+WorkloadPilot    2: 32 op, 242780200.00 ns, 7.5869 ms/op
+WorkloadPilot    3: 64 op, 639063200.00 ns, 9.9854 ms/op
+
+OverheadWarmup   1: 64 op, 4700.00 ns, 73.4375 ns/op
+OverheadWarmup   2: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadWarmup   3: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadWarmup   4: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadWarmup   7: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadWarmup   8: 64 op, 1600.00 ns, 25.0000 ns/op
+
+OverheadActual   1: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual   2: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual   3: 64 op, 4600.00 ns, 71.8750 ns/op
+OverheadActual   4: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadActual   5: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   6: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   7: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadActual   8: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   9: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual  10: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  11: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  12: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  13: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  14: 64 op, 4200.00 ns, 65.6250 ns/op
+OverheadActual  15: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  16: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  17: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  18: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadActual  19: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  20: 64 op, 1900.00 ns, 29.6875 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 669246700.00 ns, 10.4570 ms/op
+WorkloadActual   2: 64 op, 763060200.00 ns, 11.9228 ms/op
+WorkloadActual   3: 64 op, 953348900.00 ns, 14.8961 ms/op
+WorkloadActual   4: 64 op, 644613600.00 ns, 10.0721 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 669244700.00 ns, 10.4569 ms/op
+WorkloadResult   2: 64 op, 763058200.00 ns, 11.9228 ms/op
+WorkloadResult   3: 64 op, 953346900.00 ns, 14.8960 ms/op
+WorkloadResult   4: 64 op, 644611600.00 ns, 10.0721 ms/op
+
+// AfterAll
+// Benchmark Process 30932 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1284 1460 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ZKFAYY(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 246900.00 ns, 246.9000 us/op
+WorkloadJitting  1: 1 op, 16088500.00 ns, 16.0885 ms/op
+
+OverheadJitting  2: 16 op, 273000.00 ns, 17.0625 us/op
+WorkloadJitting  2: 16 op, 148808400.00 ns, 9.3005 ms/op
+
+WorkloadPilot    1: 16 op, 148405500.00 ns, 9.2753 ms/op
+WorkloadPilot    2: 32 op, 302316200.00 ns, 9.4474 ms/op
+WorkloadPilot    3: 64 op, 802932400.00 ns, 12.5458 ms/op
+
+OverheadWarmup   1: 64 op, 6100.00 ns, 95.3125 ns/op
+OverheadWarmup   2: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadWarmup   3: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   4: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadWarmup   5: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadWarmup   6: 64 op, 1600.00 ns, 25.0000 ns/op
+
+OverheadActual   1: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   2: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   3: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual   4: 64 op, 5800.00 ns, 90.6250 ns/op
+OverheadActual   5: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   6: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   7: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   8: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadActual   9: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  10: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  11: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  12: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  13: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  14: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  15: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  16: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  17: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  18: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  19: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  20: 64 op, 2200.00 ns, 34.3750 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 859203800.00 ns, 13.4251 ms/op
+WorkloadActual   2: 64 op, 766124300.00 ns, 11.9707 ms/op
+WorkloadActual   3: 64 op, 743149600.00 ns, 11.6117 ms/op
+WorkloadActual   4: 64 op, 729984500.00 ns, 11.4060 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 859201850.00 ns, 13.4250 ms/op
+WorkloadResult   2: 64 op, 766122350.00 ns, 11.9707 ms/op
+WorkloadResult   3: 64 op, 743147650.00 ns, 11.6117 ms/op
+WorkloadResult   4: 64 op, 729982550.00 ns, 11.4060 ms/op
+
+// AfterAll
+// Benchmark Process 33572 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1208 1212 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-BRLYMK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 326300.00 ns, 326.3000 us/op
+WorkloadJitting  1: 1 op, 9871400.00 ns, 9.8714 ms/op
+
+OverheadJitting  2: 16 op, 408800.00 ns, 25.5500 us/op
+WorkloadJitting  2: 16 op, 108593100.00 ns, 6.7871 ms/op
+
+WorkloadPilot    1: 16 op, 102406900.00 ns, 6.4004 ms/op
+WorkloadPilot    2: 32 op, 308695700.00 ns, 9.6467 ms/op
+WorkloadPilot    3: 64 op, 634590100.00 ns, 9.9155 ms/op
+
+OverheadWarmup   1: 64 op, 4300.00 ns, 67.1875 ns/op
+OverheadWarmup   2: 64 op, 3500.00 ns, 54.6875 ns/op
+OverheadWarmup   3: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadWarmup   4: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   5: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadWarmup   6: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   7: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   8: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   9: 64 op, 2900.00 ns, 45.3125 ns/op
+OverheadWarmup  10: 64 op, 7600.00 ns, 118.7500 ns/op
+
+OverheadActual   1: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual   2: 64 op, 4800.00 ns, 75.0000 ns/op
+OverheadActual   3: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   4: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual   5: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   6: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   7: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual   8: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   9: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  10: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  11: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  12: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  13: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  14: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual  15: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  16: 64 op, 6600.00 ns, 103.1250 ns/op
+OverheadActual  17: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  18: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual  19: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  20: 64 op, 4000.00 ns, 62.5000 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 660552600.00 ns, 10.3211 ms/op
+WorkloadActual   2: 64 op, 666724200.00 ns, 10.4176 ms/op
+WorkloadActual   3: 64 op, 705129400.00 ns, 11.0176 ms/op
+WorkloadActual   4: 64 op, 730509100.00 ns, 11.4142 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 660550500.00 ns, 10.3211 ms/op
+WorkloadResult   2: 64 op, 666722100.00 ns, 10.4175 ms/op
+WorkloadResult   3: 64 op, 705127300.00 ns, 11.0176 ms/op
+WorkloadResult   4: 64 op, 730507000.00 ns, 11.4142 ms/op
+
+// AfterAll
+// Benchmark Process 39844 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1284 1460 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 2 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XPPLTX(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 369800.00 ns, 369.8000 us/op
+WorkloadJitting  1: 1 op, 7186100.00 ns, 7.1861 ms/op
+
+OverheadJitting  2: 16 op, 294300.00 ns, 18.3938 us/op
+WorkloadJitting  2: 16 op, 111951600.00 ns, 6.9970 ms/op
+
+WorkloadPilot    1: 16 op, 112768600.00 ns, 7.0480 ms/op
+WorkloadPilot    2: 32 op, 312148900.00 ns, 9.7547 ms/op
+WorkloadPilot    3: 64 op, 910592400.00 ns, 14.2280 ms/op
+
+OverheadWarmup   1: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadWarmup   2: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadWarmup   3: 64 op, 5200.00 ns, 81.2500 ns/op
+OverheadWarmup   4: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   5: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadWarmup   6: 64 op, 2400.00 ns, 37.5000 ns/op
+
+OverheadActual   1: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   2: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   3: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual   4: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual   5: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual   6: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual   7: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual   8: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   9: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadActual  10: 64 op, 2600.00 ns, 40.6250 ns/op
+OverheadActual  11: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  12: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  13: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  14: 64 op, 4000.00 ns, 62.5000 ns/op
+OverheadActual  15: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  16: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  17: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  18: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadActual  19: 64 op, 5300.00 ns, 82.8125 ns/op
+OverheadActual  20: 64 op, 2200.00 ns, 34.3750 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 884475900.00 ns, 13.8199 ms/op
+WorkloadActual   2: 64 op, 667304600.00 ns, 10.4266 ms/op
+WorkloadActual   3: 64 op, 678885900.00 ns, 10.6076 ms/op
+WorkloadActual   4: 64 op, 729273500.00 ns, 11.3949 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 884473500.00 ns, 13.8199 ms/op
+WorkloadResult   2: 64 op, 667302200.00 ns, 10.4266 ms/op
+WorkloadResult   3: 64 op, 678883500.00 ns, 10.6076 ms/op
+WorkloadResult   4: 64 op, 729271100.00 ns, 11.3949 ms/op
+
+// AfterAll
+// Benchmark Process 38752 has exited with code 0.
+
+Mean = 13.010 ms, StdErr = 0.379 ms (2.91%), N = 37, StdDev = 2.306 ms
+Min = 8.551 ms, Q1 = 11.018 ms, Median = 13.425 ms, Q3 = 14.896 ms, Max = 17.083 ms
+IQR = 3.878 ms, LowerFence = 5.200 ms, UpperFence = 20.714 ms
+ConfidenceInterval = [11.652 ms; 14.368 ms] (CI 99.9%), Margin = 1.358 ms (10.44% of Mean)
+Skewness = -0.13, Kurtosis = 1.76, MValue = 3.13
+
+// ** Remained 3 (50.0%) benchmark(s) to run. Estimated finish 2024-09-08 22:40 (0h 15m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureB2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1204 1828 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QQFXYQ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 340000.00 ns, 340.0000 us/op
+WorkloadJitting  1: 1 op, 12788700.00 ns, 12.7887 ms/op
+
+OverheadJitting  2: 16 op, 396500.00 ns, 24.7813 us/op
+WorkloadJitting  2: 16 op, 115568200.00 ns, 7.2230 ms/op
+
+WorkloadPilot    1: 16 op, 126384600.00 ns, 7.8990 ms/op
+WorkloadPilot    2: 32 op, 215915500.00 ns, 6.7474 ms/op
+WorkloadPilot    3: 64 op, 663916900.00 ns, 10.3737 ms/op
+
+OverheadWarmup   1: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadWarmup   2: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   3: 64 op, 4700.00 ns, 73.4375 ns/op
+OverheadWarmup   4: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadWarmup   5: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadWarmup   6: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   7: 64 op, 1700.00 ns, 26.5625 ns/op
+
+OverheadActual   1: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   2: 64 op, 2700.00 ns, 42.1875 ns/op
+OverheadActual   3: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   4: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual   5: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   6: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual   7: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   8: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadActual   9: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  10: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual  11: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual  12: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  13: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  14: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  15: 64 op, 3300.00 ns, 51.5625 ns/op
+OverheadActual  16: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  17: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadActual  18: 64 op, 48300.00 ns, 754.6875 ns/op
+OverheadActual  19: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  20: 64 op, 1800.00 ns, 28.1250 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 752888300.00 ns, 11.7639 ms/op
+WorkloadActual   2: 64 op, 491754500.00 ns, 7.6837 ms/op
+WorkloadActual   3: 64 op, 669752000.00 ns, 10.4649 ms/op
+WorkloadActual   4: 64 op, 621790100.00 ns, 9.7155 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 752886050.00 ns, 11.7638 ms/op
+WorkloadResult   2: 64 op, 491752250.00 ns, 7.6836 ms/op
+WorkloadResult   3: 64 op, 669749750.00 ns, 10.4648 ms/op
+WorkloadResult   4: 64 op, 621787850.00 ns, 9.7154 ms/op
+
+// AfterAll
+// Benchmark Process 41656 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1964 1556 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ZCFOQO(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 213400.00 ns, 213.4000 us/op
+WorkloadJitting  1: 1 op, 7580700.00 ns, 7.5807 ms/op
+
+OverheadJitting  2: 16 op, 503700.00 ns, 31.4813 us/op
+WorkloadJitting  2: 16 op, 106017500.00 ns, 6.6261 ms/op
+
+WorkloadPilot    1: 16 op, 137839900.00 ns, 8.6150 ms/op
+WorkloadPilot    2: 32 op, 268289500.00 ns, 8.3840 ms/op
+WorkloadPilot    3: 64 op, 476436300.00 ns, 7.4443 ms/op
+WorkloadPilot    4: 128 op, 902231600.00 ns, 7.0487 ms/op
+
+OverheadWarmup   1: 128 op, 6100.00 ns, 47.6563 ns/op
+OverheadWarmup   2: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   3: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadWarmup   4: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   5: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   6: 128 op, 5700.00 ns, 44.5313 ns/op
+OverheadWarmup   7: 128 op, 2400.00 ns, 18.7500 ns/op
+
+OverheadActual   1: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   2: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   3: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   4: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   5: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   6: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual   7: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   8: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   9: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  10: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  11: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual  12: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  13: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  14: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  15: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  16: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  17: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual  18: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  19: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  20: 128 op, 3200.00 ns, 25.0000 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 1188484100.00 ns, 9.2850 ms/op
+WorkloadActual   2: 128 op, 982948900.00 ns, 7.6793 ms/op
+WorkloadActual   3: 128 op, 891973600.00 ns, 6.9685 ms/op
+WorkloadActual   4: 128 op, 828823800.00 ns, 6.4752 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 1188481950.00 ns, 9.2850 ms/op
+WorkloadResult   2: 128 op, 982946750.00 ns, 7.6793 ms/op
+WorkloadResult   3: 128 op, 891971450.00 ns, 6.9685 ms/op
+WorkloadResult   4: 128 op, 828821650.00 ns, 6.4752 ms/op
+
+// AfterAll
+// Benchmark Process 19264 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1208 1728 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-IMJYLZ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 377100.00 ns, 377.1000 us/op
+WorkloadJitting  1: 1 op, 9643300.00 ns, 9.6433 ms/op
+
+OverheadJitting  2: 16 op, 245200.00 ns, 15.3250 us/op
+WorkloadJitting  2: 16 op, 114270900.00 ns, 7.1419 ms/op
+
+WorkloadPilot    1: 16 op, 140232800.00 ns, 8.7646 ms/op
+WorkloadPilot    2: 32 op, 189622200.00 ns, 5.9257 ms/op
+WorkloadPilot    3: 64 op, 401286900.00 ns, 6.2701 ms/op
+WorkloadPilot    4: 128 op, 1083928300.00 ns, 8.4682 ms/op
+
+OverheadWarmup   1: 128 op, 8300.00 ns, 64.8438 ns/op
+OverheadWarmup   2: 128 op, 12100.00 ns, 94.5313 ns/op
+OverheadWarmup   3: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadWarmup   4: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   5: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadWarmup   6: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   7: 128 op, 1800.00 ns, 14.0625 ns/op
+
+OverheadActual   1: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   2: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual   3: 128 op, 2900.00 ns, 22.6563 ns/op
+OverheadActual   4: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   5: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual   6: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   7: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual   8: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual   9: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  10: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  13: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  14: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  15: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  16: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual  17: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  18: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  19: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  20: 128 op, 1800.00 ns, 14.0625 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 917176500.00 ns, 7.1654 ms/op
+WorkloadActual   2: 128 op, 1297089700.00 ns, 10.1335 ms/op
+WorkloadActual   3: 128 op, 819751600.00 ns, 6.4043 ms/op
+WorkloadActual   4: 128 op, 748620200.00 ns, 5.8486 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 917174200.00 ns, 7.1654 ms/op
+WorkloadResult   2: 128 op, 1297087400.00 ns, 10.1335 ms/op
+WorkloadResult   3: 128 op, 819749300.00 ns, 6.4043 ms/op
+WorkloadResult   4: 128 op, 748617900.00 ns, 5.8486 ms/op
+
+// AfterAll
+// Benchmark Process 42784 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1828 1160 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ELUHPU(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 291900.00 ns, 291.9000 us/op
+WorkloadJitting  1: 1 op, 7495800.00 ns, 7.4958 ms/op
+
+OverheadJitting  2: 16 op, 288300.00 ns, 18.0188 us/op
+WorkloadJitting  2: 16 op, 171268700.00 ns, 10.7043 ms/op
+
+WorkloadPilot    1: 16 op, 118198600.00 ns, 7.3874 ms/op
+WorkloadPilot    2: 32 op, 268277500.00 ns, 8.3837 ms/op
+WorkloadPilot    3: 64 op, 522103100.00 ns, 8.1579 ms/op
+
+OverheadWarmup   1: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadWarmup   2: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   3: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadWarmup   4: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadWarmup   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   7: 64 op, 2000.00 ns, 31.2500 ns/op
+
+OverheadActual   1: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   2: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   3: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual   4: 64 op, 5000.00 ns, 78.1250 ns/op
+OverheadActual   5: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   6: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual   7: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   8: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   9: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  10: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  11: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  12: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  13: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  14: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual  15: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  16: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual  17: 64 op, 4000.00 ns, 62.5000 ns/op
+OverheadActual  18: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  19: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  20: 64 op, 3400.00 ns, 53.1250 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 433520700.00 ns, 6.7738 ms/op
+WorkloadActual   2: 64 op, 497128600.00 ns, 7.7676 ms/op
+WorkloadActual   3: 64 op, 448613600.00 ns, 7.0096 ms/op
+WorkloadActual   4: 64 op, 541655800.00 ns, 8.4634 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 433518650.00 ns, 6.7737 ms/op
+WorkloadResult   2: 64 op, 497126550.00 ns, 7.7676 ms/op
+WorkloadResult   3: 64 op, 448611550.00 ns, 7.0096 ms/op
+WorkloadResult   4: 64 op, 541653750.00 ns, 8.4633 ms/op
+
+// AfterAll
+// Benchmark Process 29300 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2012 1248 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QBOSWO(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 235400.00 ns, 235.4000 us/op
+WorkloadJitting  1: 1 op, 14064700.00 ns, 14.0647 ms/op
+
+OverheadJitting  2: 16 op, 258400.00 ns, 16.1500 us/op
+WorkloadJitting  2: 16 op, 104348900.00 ns, 6.5218 ms/op
+
+WorkloadPilot    1: 16 op, 132109000.00 ns, 8.2568 ms/op
+WorkloadPilot    2: 32 op, 247772100.00 ns, 7.7429 ms/op
+WorkloadPilot    3: 64 op, 466408100.00 ns, 7.2876 ms/op
+WorkloadPilot    4: 128 op, 1068362200.00 ns, 8.3466 ms/op
+
+OverheadWarmup   1: 128 op, 6900.00 ns, 53.9063 ns/op
+OverheadWarmup   2: 128 op, 8200.00 ns, 64.0625 ns/op
+OverheadWarmup   3: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   4: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   5: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   6: 128 op, 2000.00 ns, 15.6250 ns/op
+
+OverheadActual   1: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadActual   2: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   3: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual   4: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual   5: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadActual   6: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   7: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual   8: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual   9: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  10: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  11: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  12: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  13: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  14: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  15: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadActual  16: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual  17: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  18: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  19: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  20: 128 op, 2500.00 ns, 19.5313 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 991313100.00 ns, 7.7446 ms/op
+WorkloadActual   2: 128 op, 999521500.00 ns, 7.8088 ms/op
+WorkloadActual   3: 128 op, 1386614200.00 ns, 10.8329 ms/op
+WorkloadActual   4: 128 op, 859007200.00 ns, 6.7110 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 991310850.00 ns, 7.7446 ms/op
+WorkloadResult   2: 128 op, 999519250.00 ns, 7.8087 ms/op
+WorkloadResult   3: 128 op, 859004950.00 ns, 6.7110 ms/op
+
+// AfterAll
+// Benchmark Process 38404 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1728 2004 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NPWNAK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 393200.00 ns, 393.2000 us/op
+WorkloadJitting  1: 1 op, 9347800.00 ns, 9.3478 ms/op
+
+OverheadJitting  2: 16 op, 508800.00 ns, 31.8000 us/op
+WorkloadJitting  2: 16 op, 199794900.00 ns, 12.4872 ms/op
+
+WorkloadPilot    1: 16 op, 170682600.00 ns, 10.6677 ms/op
+WorkloadPilot    2: 32 op, 382924400.00 ns, 11.9664 ms/op
+WorkloadPilot    3: 64 op, 663059400.00 ns, 10.3603 ms/op
+
+OverheadWarmup   1: 64 op, 6200.00 ns, 96.8750 ns/op
+OverheadWarmup   2: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   3: 64 op, 4900.00 ns, 76.5625 ns/op
+OverheadWarmup   4: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 64 op, 4100.00 ns, 64.0625 ns/op
+OverheadWarmup   7: 64 op, 4900.00 ns, 76.5625 ns/op
+OverheadWarmup   8: 64 op, 2500.00 ns, 39.0625 ns/op
+
+OverheadActual   1: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   2: 64 op, 3000.00 ns, 46.8750 ns/op
+OverheadActual   3: 64 op, 4300.00 ns, 67.1875 ns/op
+OverheadActual   4: 64 op, 15500.00 ns, 242.1875 ns/op
+OverheadActual   5: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual   6: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   7: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   8: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual   9: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  10: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  11: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  12: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  13: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  14: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  15: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual  16: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadActual  17: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  18: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  19: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  20: 64 op, 1900.00 ns, 29.6875 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 576703500.00 ns, 9.0110 ms/op
+WorkloadActual   2: 64 op, 606672000.00 ns, 9.4793 ms/op
+WorkloadActual   3: 64 op, 536914800.00 ns, 8.3893 ms/op
+WorkloadActual   4: 64 op, 493935500.00 ns, 7.7177 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 576701200.00 ns, 9.0110 ms/op
+WorkloadResult   2: 64 op, 606669700.00 ns, 9.4792 ms/op
+WorkloadResult   3: 64 op, 536912500.00 ns, 8.3893 ms/op
+WorkloadResult   4: 64 op, 493933200.00 ns, 7.7177 ms/op
+
+// AfterAll
+// Benchmark Process 41784 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1928 2016 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-KIDSAJ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 341400.00 ns, 341.4000 us/op
+WorkloadJitting  1: 1 op, 11562300.00 ns, 11.5623 ms/op
+
+OverheadJitting  2: 16 op, 413200.00 ns, 25.8250 us/op
+WorkloadJitting  2: 16 op, 163005900.00 ns, 10.1879 ms/op
+
+WorkloadPilot    1: 16 op, 118046600.00 ns, 7.3779 ms/op
+WorkloadPilot    2: 32 op, 216804800.00 ns, 6.7752 ms/op
+WorkloadPilot    3: 64 op, 457753700.00 ns, 7.1524 ms/op
+WorkloadPilot    4: 128 op, 941418100.00 ns, 7.3548 ms/op
+
+OverheadWarmup   1: 128 op, 12100.00 ns, 94.5313 ns/op
+OverheadWarmup   2: 128 op, 6500.00 ns, 50.7813 ns/op
+OverheadWarmup   3: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   4: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadWarmup   5: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadWarmup   6: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   7: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   8: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadWarmup   9: 128 op, 2400.00 ns, 18.7500 ns/op
+
+OverheadActual   1: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   2: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual   3: 128 op, 3200.00 ns, 25.0000 ns/op
+OverheadActual   4: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual   5: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   6: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   7: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual   8: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   9: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  10: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  13: 128 op, 4800.00 ns, 37.5000 ns/op
+OverheadActual  14: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual  15: 128 op, 10400.00 ns, 81.2500 ns/op
+OverheadActual  16: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  17: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual  18: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  19: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  20: 128 op, 1700.00 ns, 13.2813 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 1096576700.00 ns, 8.5670 ms/op
+WorkloadActual   2: 128 op, 1421618400.00 ns, 11.1064 ms/op
+WorkloadActual   3: 128 op, 931427700.00 ns, 7.2768 ms/op
+WorkloadActual   4: 128 op, 838254000.00 ns, 6.5489 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 1096574400.00 ns, 8.5670 ms/op
+WorkloadResult   2: 128 op, 1421616100.00 ns, 11.1064 ms/op
+WorkloadResult   3: 128 op, 931425400.00 ns, 7.2768 ms/op
+WorkloadResult   4: 128 op, 838251700.00 ns, 6.5488 ms/op
+
+// AfterAll
+// Benchmark Process 41924 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1900 1860 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-CCXEPX(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 381900.00 ns, 381.9000 us/op
+WorkloadJitting  1: 1 op, 13906800.00 ns, 13.9068 ms/op
+
+OverheadJitting  2: 16 op, 449300.00 ns, 28.0813 us/op
+WorkloadJitting  2: 16 op, 114465600.00 ns, 7.1541 ms/op
+
+WorkloadPilot    1: 16 op, 113348300.00 ns, 7.0843 ms/op
+WorkloadPilot    2: 32 op, 225265100.00 ns, 7.0395 ms/op
+WorkloadPilot    3: 64 op, 530984300.00 ns, 8.2966 ms/op
+
+OverheadWarmup   1: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadWarmup   2: 64 op, 3000.00 ns, 46.8750 ns/op
+OverheadWarmup   3: 64 op, 5300.00 ns, 82.8125 ns/op
+OverheadWarmup   4: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   5: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadWarmup   6: 64 op, 1900.00 ns, 29.6875 ns/op
+
+OverheadActual   1: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   2: 64 op, 1400.00 ns, 21.8750 ns/op
+OverheadActual   3: 64 op, 3200.00 ns, 50.0000 ns/op
+OverheadActual   4: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual   5: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual   6: 64 op, 3900.00 ns, 60.9375 ns/op
+OverheadActual   7: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   8: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   9: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  10: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  11: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadActual  12: 64 op, 2900.00 ns, 45.3125 ns/op
+OverheadActual  13: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  14: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  15: 64 op, 3300.00 ns, 51.5625 ns/op
+OverheadActual  16: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  17: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual  18: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadActual  19: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  20: 64 op, 2200.00 ns, 34.3750 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 468026600.00 ns, 7.3129 ms/op
+WorkloadActual   2: 64 op, 405624700.00 ns, 6.3379 ms/op
+WorkloadActual   3: 64 op, 498898000.00 ns, 7.7953 ms/op
+WorkloadActual   4: 64 op, 541554900.00 ns, 8.4618 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 468024500.00 ns, 7.3129 ms/op
+WorkloadResult   2: 64 op, 405622600.00 ns, 6.3379 ms/op
+WorkloadResult   3: 64 op, 498895900.00 ns, 7.7952 ms/op
+WorkloadResult   4: 64 op, 541552800.00 ns, 8.4618 ms/op
+
+// AfterAll
+// Benchmark Process 35388 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2060 2056 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-KTAKOM(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 202700.00 ns, 202.7000 us/op
+WorkloadJitting  1: 1 op, 10659100.00 ns, 10.6591 ms/op
+
+OverheadJitting  2: 16 op, 470200.00 ns, 29.3875 us/op
+WorkloadJitting  2: 16 op, 106776900.00 ns, 6.6736 ms/op
+
+WorkloadPilot    1: 16 op, 86906100.00 ns, 5.4316 ms/op
+WorkloadPilot    2: 32 op, 245609500.00 ns, 7.6753 ms/op
+WorkloadPilot    3: 64 op, 553286800.00 ns, 8.6451 ms/op
+
+OverheadWarmup   1: 64 op, 5000.00 ns, 78.1250 ns/op
+OverheadWarmup   2: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadWarmup   3: 64 op, 4400.00 ns, 68.7500 ns/op
+OverheadWarmup   4: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadWarmup   5: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadWarmup   6: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   7: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadWarmup   8: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadWarmup   9: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadWarmup  10: 64 op, 2000.00 ns, 31.2500 ns/op
+
+OverheadActual   1: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual   2: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   3: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual   4: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   5: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual   6: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   7: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual   8: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual   9: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  10: 64 op, 2400.00 ns, 37.5000 ns/op
+OverheadActual  11: 64 op, 3600.00 ns, 56.2500 ns/op
+OverheadActual  12: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  13: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual  14: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  15: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual  16: 64 op, 1900.00 ns, 29.6875 ns/op
+OverheadActual  17: 64 op, 1600.00 ns, 25.0000 ns/op
+OverheadActual  18: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadActual  19: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  20: 64 op, 2400.00 ns, 37.5000 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 729930500.00 ns, 11.4052 ms/op
+WorkloadActual   2: 64 op, 398332100.00 ns, 6.2239 ms/op
+WorkloadActual   3: 64 op, 620995200.00 ns, 9.7031 ms/op
+WorkloadActual   4: 64 op, 604467400.00 ns, 9.4448 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 729928300.00 ns, 11.4051 ms/op
+WorkloadResult   2: 64 op, 398329900.00 ns, 6.2239 ms/op
+WorkloadResult   3: 64 op, 620993000.00 ns, 9.7030 ms/op
+WorkloadResult   4: 64 op, 604465200.00 ns, 9.4448 ms/op
+
+// AfterAll
+// Benchmark Process 9680 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2040 1572 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureB2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 3 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YLXATG(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 349900.00 ns, 349.9000 us/op
+WorkloadJitting  1: 1 op, 18189900.00 ns, 18.1899 ms/op
+
+OverheadJitting  2: 16 op, 495600.00 ns, 30.9750 us/op
+WorkloadJitting  2: 16 op, 123058100.00 ns, 7.6911 ms/op
+
+WorkloadPilot    1: 16 op, 106352600.00 ns, 6.6470 ms/op
+WorkloadPilot    2: 32 op, 234517200.00 ns, 7.3287 ms/op
+WorkloadPilot    3: 64 op, 595538500.00 ns, 9.3053 ms/op
+
+OverheadWarmup   1: 64 op, 8100.00 ns, 126.5625 ns/op
+OverheadWarmup   2: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadWarmup   3: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadWarmup   4: 64 op, 6100.00 ns, 95.3125 ns/op
+OverheadWarmup   5: 64 op, 2000.00 ns, 31.2500 ns/op
+OverheadWarmup   6: 64 op, 2000.00 ns, 31.2500 ns/op
+
+OverheadActual   1: 64 op, 2800.00 ns, 43.7500 ns/op
+OverheadActual   2: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual   3: 64 op, 8000.00 ns, 125.0000 ns/op
+OverheadActual   4: 64 op, 1800.00 ns, 28.1250 ns/op
+OverheadActual   5: 64 op, 3800.00 ns, 59.3750 ns/op
+OverheadActual   6: 64 op, 3100.00 ns, 48.4375 ns/op
+OverheadActual   7: 64 op, 2200.00 ns, 34.3750 ns/op
+OverheadActual   8: 64 op, 3700.00 ns, 57.8125 ns/op
+OverheadActual   9: 64 op, 2900.00 ns, 45.3125 ns/op
+OverheadActual  10: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual  11: 64 op, 2500.00 ns, 39.0625 ns/op
+OverheadActual  12: 64 op, 1700.00 ns, 26.5625 ns/op
+OverheadActual  13: 64 op, 1500.00 ns, 23.4375 ns/op
+OverheadActual  14: 64 op, 2300.00 ns, 35.9375 ns/op
+OverheadActual  15: 64 op, 3400.00 ns, 53.1250 ns/op
+OverheadActual  16: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  17: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  18: 64 op, 4600.00 ns, 71.8750 ns/op
+OverheadActual  19: 64 op, 2100.00 ns, 32.8125 ns/op
+OverheadActual  20: 64 op, 1800.00 ns, 28.1250 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 483482500.00 ns, 7.5544 ms/op
+WorkloadActual   2: 64 op, 417912900.00 ns, 6.5299 ms/op
+WorkloadActual   3: 64 op, 566735000.00 ns, 8.8552 ms/op
+WorkloadActual   4: 64 op, 703909100.00 ns, 10.9986 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 483480100.00 ns, 7.5544 ms/op
+WorkloadResult   2: 64 op, 417910500.00 ns, 6.5299 ms/op
+WorkloadResult   3: 64 op, 566732600.00 ns, 8.8552 ms/op
+WorkloadResult   4: 64 op, 703906700.00 ns, 10.9985 ms/op
+
+// AfterAll
+// Benchmark Process 42504 has exited with code 0.
+
+Mean = 8.220 ms, StdErr = 0.253 ms (3.08%), N = 39, StdDev = 1.580 ms
+Min = 5.849 ms, Q1 = 6.989 ms, Median = 7.768 ms, Q3 = 9.365 ms, Max = 11.764 ms
+IQR = 2.376 ms, LowerFence = 3.425 ms, UpperFence = 12.929 ms
+ConfidenceInterval = [7.318 ms; 9.122 ms] (CI 99.9%), Margin = 0.902 ms (10.97% of Mean)
+Skewness = 0.59, Kurtosis = 2.3, MValue = 3.2
+
+// ** Remained 2 (33.3%) benchmark(s) to run. Estimated finish 2024-09-08 22:42 (0h 11m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureC1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1772 1688 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JTIUTB(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 240000.00 ns, 240.0000 us/op
+WorkloadJitting  1: 1 op, 5603300.00 ns, 5.6033 ms/op
+
+OverheadJitting  2: 16 op, 283400.00 ns, 17.7125 us/op
+WorkloadJitting  2: 16 op, 57874500.00 ns, 3.6172 ms/op
+
+WorkloadPilot    1: 16 op, 86595300.00 ns, 5.4122 ms/op
+WorkloadPilot    2: 32 op, 139647200.00 ns, 4.3640 ms/op
+WorkloadPilot    3: 64 op, 267471300.00 ns, 4.1792 ms/op
+WorkloadPilot    4: 128 op, 655890700.00 ns, 5.1241 ms/op
+
+OverheadWarmup   1: 128 op, 6900.00 ns, 53.9063 ns/op
+OverheadWarmup   2: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   3: 128 op, 6900.00 ns, 53.9063 ns/op
+OverheadWarmup   4: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadWarmup   5: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   6: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadWarmup   7: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadWarmup   8: 128 op, 4600.00 ns, 35.9375 ns/op
+OverheadWarmup   9: 128 op, 3800.00 ns, 29.6875 ns/op
+
+OverheadActual   1: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual   2: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual   3: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   4: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   5: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   6: 128 op, 3200.00 ns, 25.0000 ns/op
+OverheadActual   7: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   8: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   9: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  10: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  11: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  12: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  13: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  14: 128 op, 4700.00 ns, 36.7188 ns/op
+OverheadActual  15: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  16: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual  17: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  18: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  19: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  20: 128 op, 2000.00 ns, 15.6250 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 432206900.00 ns, 3.3766 ms/op
+WorkloadActual   2: 128 op, 422774500.00 ns, 3.3029 ms/op
+WorkloadActual   3: 128 op, 441704300.00 ns, 3.4508 ms/op
+WorkloadActual   4: 128 op, 389884500.00 ns, 3.0460 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 432204550.00 ns, 3.3766 ms/op
+WorkloadResult   2: 128 op, 422772150.00 ns, 3.3029 ms/op
+WorkloadResult   3: 128 op, 441701950.00 ns, 3.4508 ms/op
+WorkloadResult   4: 128 op, 389882150.00 ns, 3.0460 ms/op
+
+// AfterAll
+// Benchmark Process 41192 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2064 1892 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NFUVXM(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 406100.00 ns, 406.1000 us/op
+WorkloadJitting  1: 1 op, 6877200.00 ns, 6.8772 ms/op
+
+OverheadJitting  2: 16 op, 376800.00 ns, 23.5500 us/op
+WorkloadJitting  2: 16 op, 52309500.00 ns, 3.2693 ms/op
+
+WorkloadPilot    1: 16 op, 70827200.00 ns, 4.4267 ms/op
+WorkloadPilot    2: 32 op, 139057500.00 ns, 4.3455 ms/op
+WorkloadPilot    3: 64 op, 381541500.00 ns, 5.9616 ms/op
+WorkloadPilot    4: 128 op, 559360200.00 ns, 4.3700 ms/op
+
+OverheadWarmup   1: 128 op, 6400.00 ns, 50.0000 ns/op
+OverheadWarmup   2: 128 op, 6700.00 ns, 52.3438 ns/op
+OverheadWarmup   3: 128 op, 4900.00 ns, 38.2813 ns/op
+OverheadWarmup   4: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadWarmup   5: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadWarmup   6: 128 op, 2300.00 ns, 17.9688 ns/op
+
+OverheadActual   1: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   2: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual   3: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   4: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual   5: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   6: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   7: 128 op, 4900.00 ns, 38.2813 ns/op
+OverheadActual   8: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   9: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  10: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  11: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  12: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadActual  13: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual  14: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  15: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual  16: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual  17: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual  18: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  19: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  20: 128 op, 2000.00 ns, 15.6250 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 647079100.00 ns, 5.0553 ms/op
+WorkloadActual   2: 128 op, 534002600.00 ns, 4.1719 ms/op
+WorkloadActual   3: 128 op, 510173800.00 ns, 3.9857 ms/op
+WorkloadActual   4: 128 op, 456453200.00 ns, 3.5660 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 647076550.00 ns, 5.0553 ms/op
+WorkloadResult   2: 128 op, 534000050.00 ns, 4.1719 ms/op
+WorkloadResult   3: 128 op, 510171250.00 ns, 3.9857 ms/op
+WorkloadResult   4: 128 op, 456450650.00 ns, 3.5660 ms/op
+
+// AfterAll
+// Benchmark Process 40752 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1760 1208 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NNNMXD(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 213500.00 ns, 213.5000 us/op
+WorkloadJitting  1: 1 op, 7704000.00 ns, 7.7040 ms/op
+
+OverheadJitting  2: 16 op, 446700.00 ns, 27.9188 us/op
+WorkloadJitting  2: 16 op, 142539800.00 ns, 8.9087 ms/op
+
+WorkloadPilot    1: 16 op, 76438900.00 ns, 4.7774 ms/op
+WorkloadPilot    2: 32 op, 157469300.00 ns, 4.9209 ms/op
+WorkloadPilot    3: 64 op, 252317900.00 ns, 3.9425 ms/op
+WorkloadPilot    4: 128 op, 475144400.00 ns, 3.7121 ms/op
+WorkloadPilot    5: 256 op, 931949900.00 ns, 3.6404 ms/op
+
+OverheadWarmup   1: 256 op, 10500.00 ns, 41.0156 ns/op
+OverheadWarmup   2: 256 op, 6000.00 ns, 23.4375 ns/op
+OverheadWarmup   3: 256 op, 2300.00 ns, 8.9844 ns/op
+OverheadWarmup   4: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadWarmup   5: 256 op, 4500.00 ns, 17.5781 ns/op
+OverheadWarmup   6: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadWarmup   7: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadWarmup   8: 256 op, 2300.00 ns, 8.9844 ns/op
+
+OverheadActual   1: 256 op, 3400.00 ns, 13.2813 ns/op
+OverheadActual   2: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual   3: 256 op, 3600.00 ns, 14.0625 ns/op
+OverheadActual   4: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   5: 256 op, 2200.00 ns, 8.5938 ns/op
+OverheadActual   6: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual   7: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual   8: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual   9: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual  10: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual  11: 256 op, 2300.00 ns, 8.9844 ns/op
+OverheadActual  12: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual  13: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual  14: 256 op, 3600.00 ns, 14.0625 ns/op
+OverheadActual  15: 256 op, 5700.00 ns, 22.2656 ns/op
+OverheadActual  16: 256 op, 2000.00 ns, 7.8125 ns/op
+OverheadActual  17: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual  18: 256 op, 2200.00 ns, 8.5938 ns/op
+OverheadActual  19: 256 op, 4300.00 ns, 16.7969 ns/op
+OverheadActual  20: 256 op, 2000.00 ns, 7.8125 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 1656796000.00 ns, 6.4719 ms/op
+WorkloadActual   2: 256 op, 1413382800.00 ns, 5.5210 ms/op
+WorkloadActual   3: 256 op, 893757100.00 ns, 3.4912 ms/op
+WorkloadActual   4: 256 op, 819544200.00 ns, 3.2013 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 1656793350.00 ns, 6.4718 ms/op
+WorkloadResult   2: 256 op, 1413380150.00 ns, 5.5210 ms/op
+WorkloadResult   3: 256 op, 893754450.00 ns, 3.4912 ms/op
+WorkloadResult   4: 256 op, 819541550.00 ns, 3.2013 ms/op
+
+// AfterAll
+// Benchmark Process 42780 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1208 2076 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-AGHKSC(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 243600.00 ns, 243.6000 us/op
+WorkloadJitting  1: 1 op, 7674600.00 ns, 7.6746 ms/op
+
+OverheadJitting  2: 16 op, 332700.00 ns, 20.7938 us/op
+WorkloadJitting  2: 16 op, 57390400.00 ns, 3.5869 ms/op
+
+WorkloadPilot    1: 16 op, 63464500.00 ns, 3.9665 ms/op
+WorkloadPilot    2: 32 op, 96513200.00 ns, 3.0160 ms/op
+WorkloadPilot    3: 64 op, 270586700.00 ns, 4.2279 ms/op
+WorkloadPilot    4: 128 op, 774854400.00 ns, 6.0536 ms/op
+
+OverheadWarmup   1: 128 op, 16600.00 ns, 129.6875 ns/op
+OverheadWarmup   2: 128 op, 7300.00 ns, 57.0313 ns/op
+OverheadWarmup   3: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   4: 128 op, 1400.00 ns, 10.9375 ns/op
+OverheadWarmup   5: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadWarmup   6: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   7: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadWarmup   8: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadWarmup   9: 128 op, 2100.00 ns, 16.4063 ns/op
+
+OverheadActual   1: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadActual   2: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   3: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   4: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   5: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   6: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual   7: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual   8: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   9: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  10: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  13: 128 op, 2900.00 ns, 22.6563 ns/op
+OverheadActual  14: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual  15: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  16: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  17: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  18: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  19: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  20: 128 op, 2100.00 ns, 16.4063 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 572830500.00 ns, 4.4752 ms/op
+WorkloadActual   2: 128 op, 549796800.00 ns, 4.2953 ms/op
+WorkloadActual   3: 128 op, 467418400.00 ns, 3.6517 ms/op
+WorkloadActual   4: 128 op, 438418800.00 ns, 3.4251 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 572828350.00 ns, 4.4752 ms/op
+WorkloadResult   2: 128 op, 549794650.00 ns, 4.2953 ms/op
+WorkloadResult   3: 128 op, 467416250.00 ns, 3.6517 ms/op
+WorkloadResult   4: 128 op, 438416650.00 ns, 3.4251 ms/op
+
+// AfterAll
+// Benchmark Process 34348 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2092 2096 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-OSGKYO(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 338600.00 ns, 338.6000 us/op
+WorkloadJitting  1: 1 op, 7068300.00 ns, 7.0683 ms/op
+
+OverheadJitting  2: 16 op, 296000.00 ns, 18.5000 us/op
+WorkloadJitting  2: 16 op, 55022000.00 ns, 3.4389 ms/op
+
+WorkloadPilot    1: 16 op, 98598700.00 ns, 6.1624 ms/op
+WorkloadPilot    2: 32 op, 124989700.00 ns, 3.9059 ms/op
+WorkloadPilot    3: 64 op, 259646300.00 ns, 4.0570 ms/op
+WorkloadPilot    4: 128 op, 663259200.00 ns, 5.1817 ms/op
+
+OverheadWarmup   1: 128 op, 5900.00 ns, 46.0938 ns/op
+OverheadWarmup   2: 128 op, 8700.00 ns, 67.9688 ns/op
+OverheadWarmup   3: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   4: 128 op, 3200.00 ns, 25.0000 ns/op
+OverheadWarmup   5: 128 op, 1800.00 ns, 14.0625 ns/op
+
+OverheadActual   1: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   2: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   3: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual   4: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual   5: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   6: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   7: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   8: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   9: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  10: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual  11: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  12: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  13: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual  14: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  15: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  16: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  17: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  18: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  19: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  20: 128 op, 2300.00 ns, 17.9688 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 673970400.00 ns, 5.2654 ms/op
+WorkloadActual   2: 128 op, 420197900.00 ns, 3.2828 ms/op
+WorkloadActual   3: 128 op, 676774400.00 ns, 5.2873 ms/op
+WorkloadActual   4: 128 op, 634827700.00 ns, 4.9596 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 673968100.00 ns, 5.2654 ms/op
+WorkloadResult   2: 128 op, 420195600.00 ns, 3.2828 ms/op
+WorkloadResult   3: 128 op, 676772100.00 ns, 5.2873 ms/op
+WorkloadResult   4: 128 op, 634825400.00 ns, 4.9596 ms/op
+
+// AfterAll
+// Benchmark Process 27224 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1164 1760 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-PBKPCZ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 240500.00 ns, 240.5000 us/op
+WorkloadJitting  1: 1 op, 7153100.00 ns, 7.1531 ms/op
+
+OverheadJitting  2: 16 op, 288500.00 ns, 18.0313 us/op
+WorkloadJitting  2: 16 op, 76134600.00 ns, 4.7584 ms/op
+
+WorkloadPilot    1: 16 op, 49915700.00 ns, 3.1197 ms/op
+WorkloadPilot    2: 32 op, 116827700.00 ns, 3.6509 ms/op
+WorkloadPilot    3: 64 op, 274835600.00 ns, 4.2943 ms/op
+WorkloadPilot    4: 128 op, 641864100.00 ns, 5.0146 ms/op
+
+OverheadWarmup   1: 128 op, 4800.00 ns, 37.5000 ns/op
+OverheadWarmup   2: 128 op, 6500.00 ns, 50.7813 ns/op
+OverheadWarmup   3: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   4: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   5: 128 op, 2100.00 ns, 16.4063 ns/op
+
+OverheadActual   1: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   2: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   3: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   4: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual   5: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadActual   6: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   7: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadActual   8: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadActual   9: 128 op, 4600.00 ns, 35.9375 ns/op
+OverheadActual  10: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  11: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  12: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  13: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  14: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  15: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  16: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  17: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  18: 128 op, 3100.00 ns, 24.2188 ns/op
+OverheadActual  19: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual  20: 128 op, 2500.00 ns, 19.5313 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 671316500.00 ns, 5.2447 ms/op
+WorkloadActual   2: 128 op, 418714800.00 ns, 3.2712 ms/op
+WorkloadActual   3: 128 op, 471583800.00 ns, 3.6842 ms/op
+WorkloadActual   4: 128 op, 566557800.00 ns, 4.4262 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 671314050.00 ns, 5.2446 ms/op
+WorkloadResult   2: 128 op, 418712350.00 ns, 3.2712 ms/op
+WorkloadResult   3: 128 op, 471581350.00 ns, 3.6842 ms/op
+WorkloadResult   4: 128 op, 566555350.00 ns, 4.4262 ms/op
+
+// AfterAll
+// Benchmark Process 26368 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1608 1564 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-NTTJZN(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 380400.00 ns, 380.4000 us/op
+WorkloadJitting  1: 1 op, 7717700.00 ns, 7.7177 ms/op
+
+OverheadJitting  2: 16 op, 392300.00 ns, 24.5188 us/op
+WorkloadJitting  2: 16 op, 70001800.00 ns, 4.3751 ms/op
+
+WorkloadPilot    1: 16 op, 80881000.00 ns, 5.0551 ms/op
+WorkloadPilot    2: 32 op, 155933500.00 ns, 4.8729 ms/op
+WorkloadPilot    3: 64 op, 209476100.00 ns, 3.2731 ms/op
+WorkloadPilot    4: 128 op, 932248600.00 ns, 7.2832 ms/op
+
+OverheadWarmup   1: 128 op, 9300.00 ns, 72.6563 ns/op
+OverheadWarmup   2: 128 op, 20900.00 ns, 163.2813 ns/op
+OverheadWarmup   3: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadWarmup   4: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   5: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadWarmup   6: 128 op, 2300.00 ns, 17.9688 ns/op
+
+OverheadActual   1: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual   2: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   3: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   4: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   5: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   6: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   7: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   8: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   9: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  10: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  11: 128 op, 3100.00 ns, 24.2188 ns/op
+OverheadActual  12: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  13: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual  14: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual  15: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  16: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual  17: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual  18: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  19: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  20: 128 op, 2100.00 ns, 16.4063 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 433089600.00 ns, 3.3835 ms/op
+WorkloadActual   2: 128 op, 418415500.00 ns, 3.2689 ms/op
+WorkloadActual   3: 128 op, 407259700.00 ns, 3.1817 ms/op
+WorkloadActual   4: 128 op, 717619600.00 ns, 5.6064 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 433087400.00 ns, 3.3835 ms/op
+WorkloadResult   2: 128 op, 418413300.00 ns, 3.2689 ms/op
+WorkloadResult   3: 128 op, 407257500.00 ns, 3.1817 ms/op
+
+// AfterAll
+// Benchmark Process 27152 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2152 2148 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XEKYTF(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 316000.00 ns, 316.0000 us/op
+WorkloadJitting  1: 1 op, 9792000.00 ns, 9.7920 ms/op
+
+OverheadJitting  2: 16 op, 363100.00 ns, 22.6938 us/op
+WorkloadJitting  2: 16 op, 67375400.00 ns, 4.2110 ms/op
+
+WorkloadPilot    1: 16 op, 51516900.00 ns, 3.2198 ms/op
+WorkloadPilot    2: 32 op, 120466200.00 ns, 3.7646 ms/op
+WorkloadPilot    3: 64 op, 306716900.00 ns, 4.7925 ms/op
+WorkloadPilot    4: 128 op, 652465100.00 ns, 5.0974 ms/op
+
+OverheadWarmup   1: 128 op, 4400.00 ns, 34.3750 ns/op
+OverheadWarmup   2: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadWarmup   3: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   4: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadWarmup   5: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadWarmup   6: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadWarmup   7: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   8: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadWarmup   9: 128 op, 2000.00 ns, 15.6250 ns/op
+
+OverheadActual   1: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual   2: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual   3: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   4: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   5: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   6: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   7: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual   8: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   9: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  10: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual  11: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  12: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  13: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual  14: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  15: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  16: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  17: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  18: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual  19: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadActual  20: 128 op, 2500.00 ns, 19.5313 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 747647500.00 ns, 5.8410 ms/op
+WorkloadActual   2: 128 op, 559894500.00 ns, 4.3742 ms/op
+WorkloadActual   3: 128 op, 748341700.00 ns, 5.8464 ms/op
+WorkloadActual   4: 128 op, 441915700.00 ns, 3.4525 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 747645200.00 ns, 5.8410 ms/op
+WorkloadResult   2: 128 op, 559892200.00 ns, 4.3742 ms/op
+WorkloadResult   3: 128 op, 748339400.00 ns, 5.8464 ms/op
+WorkloadResult   4: 128 op, 441913400.00 ns, 3.4524 ms/op
+
+// AfterAll
+// Benchmark Process 37476 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2164 1760 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XKDKFA(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 354700.00 ns, 354.7000 us/op
+WorkloadJitting  1: 1 op, 5058500.00 ns, 5.0585 ms/op
+
+OverheadJitting  2: 16 op, 317800.00 ns, 19.8625 us/op
+WorkloadJitting  2: 16 op, 100264800.00 ns, 6.2666 ms/op
+
+WorkloadPilot    1: 16 op, 69638800.00 ns, 4.3524 ms/op
+WorkloadPilot    2: 32 op, 129882900.00 ns, 4.0588 ms/op
+WorkloadPilot    3: 64 op, 258094600.00 ns, 4.0327 ms/op
+WorkloadPilot    4: 128 op, 657676900.00 ns, 5.1381 ms/op
+
+OverheadWarmup   1: 128 op, 10000.00 ns, 78.1250 ns/op
+OverheadWarmup   2: 128 op, 9300.00 ns, 72.6563 ns/op
+OverheadWarmup   3: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   4: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   5: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   6: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   7: 128 op, 2100.00 ns, 16.4063 ns/op
+
+OverheadActual   1: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   2: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   3: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadActual   4: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   5: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   6: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   7: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   8: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual   9: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  10: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  11: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  12: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  13: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  14: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  15: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  16: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  17: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  18: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual  19: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual  20: 128 op, 2200.00 ns, 17.1875 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 703474500.00 ns, 5.4959 ms/op
+WorkloadActual   2: 128 op, 519536000.00 ns, 4.0589 ms/op
+WorkloadActual   3: 128 op, 486803800.00 ns, 3.8032 ms/op
+WorkloadActual   4: 128 op, 503400000.00 ns, 3.9328 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 519533850.00 ns, 4.0589 ms/op
+WorkloadResult   2: 128 op, 486801650.00 ns, 3.8031 ms/op
+WorkloadResult   3: 128 op, 503397850.00 ns, 3.9328 ms/op
+
+// AfterAll
+// Benchmark Process 20324 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2192 2196 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC1 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 4 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-AOZDKB(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 406500.00 ns, 406.5000 us/op
+WorkloadJitting  1: 1 op, 4250800.00 ns, 4.2508 ms/op
+
+OverheadJitting  2: 16 op, 288300.00 ns, 18.0188 us/op
+WorkloadJitting  2: 16 op, 102056500.00 ns, 6.3785 ms/op
+
+WorkloadPilot    1: 16 op, 71392200.00 ns, 4.4620 ms/op
+WorkloadPilot    2: 32 op, 143821100.00 ns, 4.4944 ms/op
+WorkloadPilot    3: 64 op, 293579600.00 ns, 4.5872 ms/op
+WorkloadPilot    4: 128 op, 634566300.00 ns, 4.9575 ms/op
+
+OverheadWarmup   1: 128 op, 5600.00 ns, 43.7500 ns/op
+OverheadWarmup   2: 128 op, 10100.00 ns, 78.9063 ns/op
+OverheadWarmup   3: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   4: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadWarmup   5: 128 op, 1900.00 ns, 14.8438 ns/op
+
+OverheadActual   1: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual   2: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   3: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual   4: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   5: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   6: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual   7: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual   8: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   9: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  10: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  13: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  14: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  15: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  16: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  17: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  18: 128 op, 3100.00 ns, 24.2188 ns/op
+OverheadActual  19: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  20: 128 op, 3500.00 ns, 27.3438 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 620654000.00 ns, 4.8489 ms/op
+WorkloadActual   2: 128 op, 482973500.00 ns, 3.7732 ms/op
+WorkloadActual   3: 128 op, 504967900.00 ns, 3.9451 ms/op
+WorkloadActual   4: 128 op, 423633700.00 ns, 3.3096 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 620651500.00 ns, 4.8488 ms/op
+WorkloadResult   2: 128 op, 482971000.00 ns, 3.7732 ms/op
+WorkloadResult   3: 128 op, 504965400.00 ns, 3.9450 ms/op
+WorkloadResult   4: 128 op, 423631200.00 ns, 3.3096 ms/op
+
+// AfterAll
+// Benchmark Process 42756 has exited with code 0.
+
+Mean = 4.130 ms, StdErr = 0.146 ms (3.54%), N = 38, StdDev = 0.901 ms
+Min = 3.046 ms, Q1 = 3.394 ms, Median = 3.868 ms, Q3 = 4.755 ms, Max = 6.472 ms
+IQR = 1.362 ms, LowerFence = 1.352 ms, UpperFence = 6.798 ms
+ConfidenceInterval = [3.607 ms; 4.652 ms] (CI 99.9%), Margin = 0.522 ms (12.65% of Mean)
+Skewness = 0.84, Kurtosis = 2.59, MValue = 3.11
+
+// ** Remained 1 (16.7%) benchmark(s) to run. Estimated finish 2024-09-08 22:44 (0h 5m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: BenchMarkClass.MeasureC2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2208 1768 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JGEIKB(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 375300.00 ns, 375.3000 us/op
+WorkloadJitting  1: 1 op, 8124900.00 ns, 8.1249 ms/op
+
+OverheadJitting  2: 16 op, 294400.00 ns, 18.4000 us/op
+WorkloadJitting  2: 16 op, 56751700.00 ns, 3.5470 ms/op
+
+WorkloadPilot    1: 16 op, 58836200.00 ns, 3.6773 ms/op
+WorkloadPilot    2: 32 op, 112164100.00 ns, 3.5051 ms/op
+WorkloadPilot    3: 64 op, 299114800.00 ns, 4.6737 ms/op
+WorkloadPilot    4: 128 op, 698128500.00 ns, 5.4541 ms/op
+
+OverheadWarmup   1: 128 op, 7000.00 ns, 54.6875 ns/op
+OverheadWarmup   2: 128 op, 12100.00 ns, 94.5313 ns/op
+OverheadWarmup   3: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadWarmup   4: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   5: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   6: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadWarmup   7: 128 op, 1400.00 ns, 10.9375 ns/op
+
+OverheadActual   1: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual   2: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   3: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   4: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   5: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   6: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual   7: 128 op, 3200.00 ns, 25.0000 ns/op
+OverheadActual   8: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   9: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  10: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadActual  11: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  12: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  13: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  14: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  15: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  16: 128 op, 5400.00 ns, 42.1875 ns/op
+OverheadActual  17: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  18: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  19: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  20: 128 op, 4100.00 ns, 32.0313 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 671711900.00 ns, 5.2477 ms/op
+WorkloadActual   2: 128 op, 899457100.00 ns, 7.0270 ms/op
+WorkloadActual   3: 128 op, 689306400.00 ns, 5.3852 ms/op
+WorkloadActual   4: 128 op, 940249500.00 ns, 7.3457 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 671709700.00 ns, 5.2477 ms/op
+WorkloadResult   2: 128 op, 899454900.00 ns, 7.0270 ms/op
+WorkloadResult   3: 128 op, 689304200.00 ns, 5.3852 ms/op
+WorkloadResult   4: 128 op, 940247300.00 ns, 7.3457 ms/op
+
+// AfterAll
+// Benchmark Process 22576 has exited with code 0.
+// Launch: 2 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2152 2212 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-FRAMWK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 402500.00 ns, 402.5000 us/op
+WorkloadJitting  1: 1 op, 7923400.00 ns, 7.9234 ms/op
+
+OverheadJitting  2: 16 op, 385900.00 ns, 24.1188 us/op
+WorkloadJitting  2: 16 op, 120042900.00 ns, 7.5027 ms/op
+
+WorkloadPilot    1: 16 op, 89081200.00 ns, 5.5676 ms/op
+WorkloadPilot    2: 32 op, 156751000.00 ns, 4.8985 ms/op
+WorkloadPilot    3: 64 op, 266505300.00 ns, 4.1641 ms/op
+WorkloadPilot    4: 128 op, 498186000.00 ns, 3.8921 ms/op
+WorkloadPilot    5: 256 op, 1597389800.00 ns, 6.2398 ms/op
+
+OverheadWarmup   1: 256 op, 12200.00 ns, 47.6563 ns/op
+OverheadWarmup   2: 256 op, 5900.00 ns, 23.0469 ns/op
+OverheadWarmup   3: 256 op, 2200.00 ns, 8.5938 ns/op
+OverheadWarmup   4: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadWarmup   5: 256 op, 2300.00 ns, 8.9844 ns/op
+OverheadWarmup   6: 256 op, 2000.00 ns, 7.8125 ns/op
+OverheadWarmup   7: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadWarmup   8: 256 op, 2600.00 ns, 10.1563 ns/op
+
+OverheadActual   1: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual   2: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual   3: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual   4: 256 op, 7100.00 ns, 27.7344 ns/op
+OverheadActual   5: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual   6: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   7: 256 op, 6300.00 ns, 24.6094 ns/op
+OverheadActual   8: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   9: 256 op, 3100.00 ns, 12.1094 ns/op
+OverheadActual  10: 256 op, 3200.00 ns, 12.5000 ns/op
+OverheadActual  11: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual  12: 256 op, 3000.00 ns, 11.7188 ns/op
+OverheadActual  13: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual  14: 256 op, 4400.00 ns, 17.1875 ns/op
+OverheadActual  15: 256 op, 8000.00 ns, 31.2500 ns/op
+OverheadActual  16: 256 op, 3900.00 ns, 15.2344 ns/op
+OverheadActual  17: 256 op, 4400.00 ns, 17.1875 ns/op
+OverheadActual  18: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual  19: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual  20: 256 op, 1900.00 ns, 7.4219 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 1509309600.00 ns, 5.8957 ms/op
+WorkloadActual   2: 256 op, 1229855100.00 ns, 4.8041 ms/op
+WorkloadActual   3: 256 op, 883047500.00 ns, 3.4494 ms/op
+WorkloadActual   4: 256 op, 928656100.00 ns, 3.6276 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 1509306800.00 ns, 5.8957 ms/op
+WorkloadResult   2: 256 op, 1229852300.00 ns, 4.8041 ms/op
+WorkloadResult   3: 256 op, 883044700.00 ns, 3.4494 ms/op
+WorkloadResult   4: 256 op, 928653300.00 ns, 3.6276 ms/op
+
+// AfterAll
+// Benchmark Process 34348 has exited with code 0.
+// Launch: 3 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2236 2200 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-AGDUSG(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 306300.00 ns, 306.3000 us/op
+WorkloadJitting  1: 1 op, 7956900.00 ns, 7.9569 ms/op
+
+OverheadJitting  2: 16 op, 343500.00 ns, 21.4688 us/op
+WorkloadJitting  2: 16 op, 51002300.00 ns, 3.1876 ms/op
+
+WorkloadPilot    1: 16 op, 51900200.00 ns, 3.2438 ms/op
+WorkloadPilot    2: 32 op, 104959700.00 ns, 3.2800 ms/op
+WorkloadPilot    3: 64 op, 285651100.00 ns, 4.4633 ms/op
+WorkloadPilot    4: 128 op, 710667500.00 ns, 5.5521 ms/op
+
+OverheadWarmup   1: 128 op, 7000.00 ns, 54.6875 ns/op
+OverheadWarmup   2: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadWarmup   3: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadWarmup   4: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   5: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   6: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   7: 128 op, 1800.00 ns, 14.0625 ns/op
+
+OverheadActual   1: 128 op, 2900.00 ns, 22.6563 ns/op
+OverheadActual   2: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual   3: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual   4: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   5: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   6: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadActual   7: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   8: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual   9: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  10: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual  11: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  12: 128 op, 3800.00 ns, 29.6875 ns/op
+OverheadActual  13: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual  14: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  15: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual  16: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadActual  17: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  18: 128 op, 3500.00 ns, 27.3438 ns/op
+OverheadActual  19: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  20: 128 op, 2300.00 ns, 17.9688 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 538059300.00 ns, 4.2036 ms/op
+WorkloadActual   2: 128 op, 582610300.00 ns, 4.5516 ms/op
+WorkloadActual   3: 128 op, 396824700.00 ns, 3.1002 ms/op
+WorkloadActual   4: 128 op, 812000700.00 ns, 6.3438 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 538056450.00 ns, 4.2036 ms/op
+WorkloadResult   2: 128 op, 582607450.00 ns, 4.5516 ms/op
+WorkloadResult   3: 128 op, 396821850.00 ns, 3.1002 ms/op
+WorkloadResult   4: 128 op, 811997850.00 ns, 6.3437 ms/op
+
+// AfterAll
+// Benchmark Process 30952 has exited with code 0.
+// Launch: 4 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2036 2120 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JUIWQJ(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 207200.00 ns, 207.2000 us/op
+WorkloadJitting  1: 1 op, 7720700.00 ns, 7.7207 ms/op
+
+OverheadJitting  2: 16 op, 358700.00 ns, 22.4188 us/op
+WorkloadJitting  2: 16 op, 63404300.00 ns, 3.9628 ms/op
+
+WorkloadPilot    1: 16 op, 65902600.00 ns, 4.1189 ms/op
+WorkloadPilot    2: 32 op, 119766500.00 ns, 3.7427 ms/op
+WorkloadPilot    3: 64 op, 333436700.00 ns, 5.2099 ms/op
+WorkloadPilot    4: 128 op, 644094800.00 ns, 5.0320 ms/op
+
+OverheadWarmup   1: 128 op, 5000.00 ns, 39.0625 ns/op
+OverheadWarmup   2: 128 op, 7100.00 ns, 55.4688 ns/op
+OverheadWarmup   3: 128 op, 1600.00 ns, 12.5000 ns/op
+OverheadWarmup   4: 128 op, 2900.00 ns, 22.6563 ns/op
+OverheadWarmup   5: 128 op, 2300.00 ns, 17.9688 ns/op
+
+OverheadActual   1: 128 op, 2600.00 ns, 20.3125 ns/op
+OverheadActual   2: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual   3: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual   4: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   5: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual   6: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   7: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   8: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual   9: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  10: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  11: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual  12: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  13: 128 op, 34600.00 ns, 270.3125 ns/op
+OverheadActual  14: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual  15: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  16: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual  17: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  18: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual  19: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  20: 128 op, 2300.00 ns, 17.9688 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 661115100.00 ns, 5.1650 ms/op
+WorkloadActual   2: 128 op, 723371800.00 ns, 5.6513 ms/op
+WorkloadActual   3: 128 op, 562068000.00 ns, 4.3912 ms/op
+WorkloadActual   4: 128 op, 651840000.00 ns, 5.0925 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 661112550.00 ns, 5.1649 ms/op
+WorkloadResult   2: 128 op, 723369250.00 ns, 5.6513 ms/op
+WorkloadResult   3: 128 op, 562065450.00 ns, 4.3911 ms/op
+WorkloadResult   4: 128 op, 651837450.00 ns, 5.0925 ms/op
+
+// AfterAll
+// Benchmark Process 36280 has exited with code 0.
+// Launch: 5 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1248 1456 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ODIMGO(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 227200.00 ns, 227.2000 us/op
+WorkloadJitting  1: 1 op, 6736800.00 ns, 6.7368 ms/op
+
+OverheadJitting  2: 16 op, 1083500.00 ns, 67.7188 us/op
+WorkloadJitting  2: 16 op, 67978300.00 ns, 4.2486 ms/op
+
+WorkloadPilot    1: 16 op, 82001300.00 ns, 5.1251 ms/op
+WorkloadPilot    2: 32 op, 151675700.00 ns, 4.7399 ms/op
+WorkloadPilot    3: 64 op, 245021800.00 ns, 3.8285 ms/op
+WorkloadPilot    4: 128 op, 465978600.00 ns, 3.6405 ms/op
+WorkloadPilot    5: 256 op, 951885300.00 ns, 3.7183 ms/op
+
+OverheadWarmup   1: 256 op, 5600.00 ns, 21.8750 ns/op
+OverheadWarmup   2: 256 op, 6700.00 ns, 26.1719 ns/op
+OverheadWarmup   3: 256 op, 3300.00 ns, 12.8906 ns/op
+OverheadWarmup   4: 256 op, 4400.00 ns, 17.1875 ns/op
+OverheadWarmup   5: 256 op, 7200.00 ns, 28.1250 ns/op
+OverheadWarmup   6: 256 op, 2300.00 ns, 8.9844 ns/op
+
+OverheadActual   1: 256 op, 2200.00 ns, 8.5938 ns/op
+OverheadActual   2: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual   3: 256 op, 3200.00 ns, 12.5000 ns/op
+OverheadActual   4: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual   5: 256 op, 3700.00 ns, 14.4531 ns/op
+OverheadActual   6: 256 op, 2100.00 ns, 8.2031 ns/op
+OverheadActual   7: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   8: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual   9: 256 op, 4700.00 ns, 18.3594 ns/op
+OverheadActual  10: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual  11: 256 op, 1900.00 ns, 7.4219 ns/op
+OverheadActual  12: 256 op, 3100.00 ns, 12.1094 ns/op
+OverheadActual  13: 256 op, 3900.00 ns, 15.2344 ns/op
+OverheadActual  14: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual  15: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual  16: 256 op, 7800.00 ns, 30.4688 ns/op
+OverheadActual  17: 256 op, 4500.00 ns, 17.5781 ns/op
+OverheadActual  18: 256 op, 3200.00 ns, 12.5000 ns/op
+OverheadActual  19: 256 op, 7200.00 ns, 28.1250 ns/op
+OverheadActual  20: 256 op, 2600.00 ns, 10.1563 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 1128061000.00 ns, 4.4065 ms/op
+WorkloadActual   2: 256 op, 1105823000.00 ns, 4.3196 ms/op
+WorkloadActual   3: 256 op, 899952000.00 ns, 3.5154 ms/op
+WorkloadActual   4: 256 op, 1367720900.00 ns, 5.3427 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 1128058150.00 ns, 4.4065 ms/op
+WorkloadResult   2: 256 op, 1105820150.00 ns, 4.3196 ms/op
+WorkloadResult   3: 256 op, 899949150.00 ns, 3.5154 ms/op
+WorkloadResult   4: 256 op, 1367718050.00 ns, 5.3426 ms/op
+
+// AfterAll
+// Benchmark Process 40656 has exited with code 0.
+// Launch: 6 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1992 2072 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-YLYMYB(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 288500.00 ns, 288.5000 us/op
+WorkloadJitting  1: 1 op, 4163800.00 ns, 4.1638 ms/op
+
+OverheadJitting  2: 16 op, 377400.00 ns, 23.5875 us/op
+WorkloadJitting  2: 16 op, 105256200.00 ns, 6.5785 ms/op
+
+WorkloadPilot    1: 16 op, 114142900.00 ns, 7.1339 ms/op
+WorkloadPilot    2: 32 op, 150584400.00 ns, 4.7058 ms/op
+WorkloadPilot    3: 64 op, 259562500.00 ns, 4.0557 ms/op
+WorkloadPilot    4: 128 op, 550540500.00 ns, 4.3011 ms/op
+
+OverheadWarmup   1: 128 op, 8300.00 ns, 64.8438 ns/op
+OverheadWarmup   2: 128 op, 8600.00 ns, 67.1875 ns/op
+OverheadWarmup   3: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadWarmup   4: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadWarmup   5: 128 op, 2800.00 ns, 21.8750 ns/op
+
+OverheadActual   1: 128 op, 2900.00 ns, 22.6563 ns/op
+OverheadActual   2: 128 op, 3200.00 ns, 25.0000 ns/op
+OverheadActual   3: 128 op, 5800.00 ns, 45.3125 ns/op
+OverheadActual   4: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual   5: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadActual   6: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   7: 128 op, 16800.00 ns, 131.2500 ns/op
+OverheadActual   8: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   9: 128 op, 4200.00 ns, 32.8125 ns/op
+OverheadActual  10: 128 op, 3600.00 ns, 28.1250 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadActual  13: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadActual  14: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual  15: 128 op, 3900.00 ns, 30.4688 ns/op
+OverheadActual  16: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  17: 128 op, 3100.00 ns, 24.2188 ns/op
+OverheadActual  18: 128 op, 3300.00 ns, 25.7813 ns/op
+OverheadActual  19: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  20: 128 op, 2200.00 ns, 17.1875 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 890693500.00 ns, 6.9585 ms/op
+WorkloadActual   2: 128 op, 687411700.00 ns, 5.3704 ms/op
+WorkloadActual   3: 128 op, 567721900.00 ns, 4.4353 ms/op
+WorkloadActual   4: 128 op, 914472600.00 ns, 7.1443 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 890690500.00 ns, 6.9585 ms/op
+WorkloadResult   2: 128 op, 687408700.00 ns, 5.3704 ms/op
+WorkloadResult   3: 128 op, 567718900.00 ns, 4.4353 ms/op
+WorkloadResult   4: 128 op, 914469600.00 ns, 7.1443 ms/op
+
+// AfterAll
+// Benchmark Process 40772 has exited with code 0.
+// Launch: 7 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2236 2148 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ULGWWD(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 380100.00 ns, 380.1000 us/op
+WorkloadJitting  1: 1 op, 7773200.00 ns, 7.7732 ms/op
+
+OverheadJitting  2: 16 op, 400100.00 ns, 25.0063 us/op
+WorkloadJitting  2: 16 op, 112810700.00 ns, 7.0507 ms/op
+
+WorkloadPilot    1: 16 op, 74990900.00 ns, 4.6869 ms/op
+WorkloadPilot    2: 32 op, 149050800.00 ns, 4.6578 ms/op
+WorkloadPilot    3: 64 op, 214073600.00 ns, 3.3449 ms/op
+WorkloadPilot    4: 128 op, 758705000.00 ns, 5.9274 ms/op
+
+OverheadWarmup   1: 128 op, 5300.00 ns, 41.4063 ns/op
+OverheadWarmup   2: 128 op, 4800.00 ns, 37.5000 ns/op
+OverheadWarmup   3: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadWarmup   4: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadWarmup   5: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadWarmup   6: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadWarmup   7: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadWarmup   8: 128 op, 2900.00 ns, 22.6563 ns/op
+
+OverheadActual   1: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   2: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual   3: 128 op, 4100.00 ns, 32.0313 ns/op
+OverheadActual   4: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   5: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual   6: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual   7: 128 op, 3100.00 ns, 24.2188 ns/op
+OverheadActual   8: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   9: 128 op, 3000.00 ns, 23.4375 ns/op
+OverheadActual  10: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual  11: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  12: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  13: 128 op, 7000.00 ns, 54.6875 ns/op
+OverheadActual  14: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  15: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadActual  16: 128 op, 2400.00 ns, 18.7500 ns/op
+OverheadActual  17: 128 op, 11100.00 ns, 86.7188 ns/op
+OverheadActual  18: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual  19: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual  20: 128 op, 3900.00 ns, 30.4688 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 969342000.00 ns, 7.5730 ms/op
+WorkloadActual   2: 128 op, 917481300.00 ns, 7.1678 ms/op
+WorkloadActual   3: 128 op, 667856400.00 ns, 5.2176 ms/op
+WorkloadActual   4: 128 op, 528004500.00 ns, 4.1250 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 969339600.00 ns, 7.5730 ms/op
+WorkloadResult   2: 128 op, 917478900.00 ns, 7.1678 ms/op
+WorkloadResult   3: 128 op, 667854000.00 ns, 5.2176 ms/op
+WorkloadResult   4: 128 op, 528002100.00 ns, 4.1250 ms/op
+
+// AfterAll
+// Benchmark Process 16124 has exited with code 0.
+// Launch: 8 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2208 2200 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-MXHCOF(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 317100.00 ns, 317.1000 us/op
+WorkloadJitting  1: 1 op, 7593200.00 ns, 7.5932 ms/op
+
+OverheadJitting  2: 16 op, 492700.00 ns, 30.7938 us/op
+WorkloadJitting  2: 16 op, 87465100.00 ns, 5.4666 ms/op
+
+WorkloadPilot    1: 16 op, 65182600.00 ns, 4.0739 ms/op
+WorkloadPilot    2: 32 op, 170055300.00 ns, 5.3142 ms/op
+WorkloadPilot    3: 64 op, 480619100.00 ns, 7.5097 ms/op
+WorkloadPilot    4: 128 op, 462930500.00 ns, 3.6166 ms/op
+WorkloadPilot    5: 256 op, 1439388100.00 ns, 5.6226 ms/op
+
+OverheadWarmup   1: 256 op, 8000.00 ns, 31.2500 ns/op
+OverheadWarmup   2: 256 op, 6300.00 ns, 24.6094 ns/op
+OverheadWarmup   3: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadWarmup   4: 256 op, 5500.00 ns, 21.4844 ns/op
+OverheadWarmup   5: 256 op, 3100.00 ns, 12.1094 ns/op
+OverheadWarmup   6: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadWarmup   7: 256 op, 3200.00 ns, 12.5000 ns/op
+OverheadWarmup   8: 256 op, 2200.00 ns, 8.5938 ns/op
+
+OverheadActual   1: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual   2: 256 op, 8400.00 ns, 32.8125 ns/op
+OverheadActual   3: 256 op, 4400.00 ns, 17.1875 ns/op
+OverheadActual   4: 256 op, 3800.00 ns, 14.8438 ns/op
+OverheadActual   5: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual   6: 256 op, 3200.00 ns, 12.5000 ns/op
+OverheadActual   7: 256 op, 4100.00 ns, 16.0156 ns/op
+OverheadActual   8: 256 op, 3700.00 ns, 14.4531 ns/op
+OverheadActual   9: 256 op, 2200.00 ns, 8.5938 ns/op
+OverheadActual  10: 256 op, 4900.00 ns, 19.1406 ns/op
+OverheadActual  11: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual  12: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual  13: 256 op, 2100.00 ns, 8.2031 ns/op
+OverheadActual  14: 256 op, 3300.00 ns, 12.8906 ns/op
+OverheadActual  15: 256 op, 2900.00 ns, 11.3281 ns/op
+OverheadActual  16: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual  17: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual  18: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual  19: 256 op, 2100.00 ns, 8.2031 ns/op
+OverheadActual  20: 256 op, 2100.00 ns, 8.2031 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 1405200700.00 ns, 5.4891 ms/op
+WorkloadActual   2: 256 op, 1200906400.00 ns, 4.6910 ms/op
+WorkloadActual   3: 256 op, 1035796700.00 ns, 4.0461 ms/op
+WorkloadActual   4: 256 op, 1439310500.00 ns, 5.6223 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 1405197800.00 ns, 5.4891 ms/op
+WorkloadResult   2: 256 op, 1200903500.00 ns, 4.6910 ms/op
+WorkloadResult   3: 256 op, 1035793800.00 ns, 4.0461 ms/op
+WorkloadResult   4: 256 op, 1439307600.00 ns, 5.6223 ms/op
+
+// AfterAll
+// Benchmark Process 30472 has exited with code 0.
+// Launch: 9 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 1340 1328 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-JCHGHF(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 411900.00 ns, 411.9000 us/op
+WorkloadJitting  1: 1 op, 8047200.00 ns, 8.0472 ms/op
+
+OverheadJitting  2: 16 op, 479500.00 ns, 29.9688 us/op
+WorkloadJitting  2: 16 op, 120292200.00 ns, 7.5183 ms/op
+
+WorkloadPilot    1: 16 op, 136192600.00 ns, 8.5120 ms/op
+WorkloadPilot    2: 32 op, 246829900.00 ns, 7.7134 ms/op
+WorkloadPilot    3: 64 op, 468183400.00 ns, 7.3154 ms/op
+WorkloadPilot    4: 128 op, 1029525600.00 ns, 8.0432 ms/op
+
+OverheadWarmup   1: 128 op, 9400.00 ns, 73.4375 ns/op
+OverheadWarmup   2: 128 op, 10900.00 ns, 85.1563 ns/op
+OverheadWarmup   3: 128 op, 4400.00 ns, 34.3750 ns/op
+OverheadWarmup   4: 128 op, 2200.00 ns, 17.1875 ns/op
+OverheadWarmup   5: 128 op, 3700.00 ns, 28.9063 ns/op
+OverheadWarmup   6: 128 op, 4500.00 ns, 35.1563 ns/op
+OverheadWarmup   7: 128 op, 4000.00 ns, 31.2500 ns/op
+
+OverheadActual   1: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   2: 128 op, 2300.00 ns, 17.9688 ns/op
+OverheadActual   3: 128 op, 3400.00 ns, 26.5625 ns/op
+OverheadActual   4: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual   5: 128 op, 1900.00 ns, 14.8438 ns/op
+OverheadActual   6: 128 op, 1800.00 ns, 14.0625 ns/op
+OverheadActual   7: 128 op, 1500.00 ns, 11.7188 ns/op
+OverheadActual   8: 128 op, 2000.00 ns, 15.6250 ns/op
+OverheadActual   9: 128 op, 4300.00 ns, 33.5938 ns/op
+OverheadActual  10: 128 op, 4000.00 ns, 31.2500 ns/op
+OverheadActual  11: 128 op, 2700.00 ns, 21.0938 ns/op
+OverheadActual  12: 128 op, 1700.00 ns, 13.2813 ns/op
+OverheadActual  13: 128 op, 2100.00 ns, 16.4063 ns/op
+OverheadActual  14: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  15: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  16: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  17: 128 op, 2800.00 ns, 21.8750 ns/op
+OverheadActual  18: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  19: 128 op, 2500.00 ns, 19.5313 ns/op
+OverheadActual  20: 128 op, 6300.00 ns, 49.2188 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 564671100.00 ns, 4.4115 ms/op
+WorkloadActual   2: 128 op, 368458300.00 ns, 2.8786 ms/op
+WorkloadActual   3: 128 op, 375814500.00 ns, 2.9361 ms/op
+WorkloadActual   4: 128 op, 459936300.00 ns, 3.5933 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 564668600.00 ns, 4.4115 ms/op
+WorkloadResult   2: 128 op, 368455800.00 ns, 2.8786 ms/op
+WorkloadResult   3: 128 op, 375812000.00 ns, 2.9360 ms/op
+WorkloadResult   4: 128 op, 459933800.00 ns, 3.5932 ms/op
+
+// AfterAll
+// Benchmark Process 24292 has exited with code 0.
+// Launch: 10 / 10
+// Execute: dotnet de3bee99-d6b9-4da6-94b2-aeffc2335338.dll --anonymousPipes 2148 2204 --benchmarkName For_vs_foreach.BenchMarkClass.MeasureC2 --job "IterationCount=4, LaunchCount=10, WarmupCount=0" --benchmarkId 5 in C:\git\cSharpSandbox\PerfForVsForeach\bin\Release\net8.0\de3bee99-d6b9-4da6-94b2-aeffc2335338\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-XFKBVC(IterationCount=4, LaunchCount=10, WarmupCount=0)
+
+OverheadJitting  1: 1 op, 316700.00 ns, 316.7000 us/op
+WorkloadJitting  1: 1 op, 7182100.00 ns, 7.1821 ms/op
+
+OverheadJitting  2: 16 op, 426400.00 ns, 26.6500 us/op
+WorkloadJitting  2: 16 op, 78024100.00 ns, 4.8765 ms/op
+
+WorkloadPilot    1: 16 op, 55401500.00 ns, 3.4626 ms/op
+WorkloadPilot    2: 32 op, 94703100.00 ns, 2.9595 ms/op
+WorkloadPilot    3: 64 op, 238005500.00 ns, 3.7188 ms/op
+WorkloadPilot    4: 128 op, 463341200.00 ns, 3.6199 ms/op
+WorkloadPilot    5: 256 op, 864671200.00 ns, 3.3776 ms/op
+
+OverheadWarmup   1: 256 op, 9600.00 ns, 37.5000 ns/op
+OverheadWarmup   2: 256 op, 9700.00 ns, 37.8906 ns/op
+OverheadWarmup   3: 256 op, 3100.00 ns, 12.1094 ns/op
+OverheadWarmup   4: 256 op, 5200.00 ns, 20.3125 ns/op
+OverheadWarmup   5: 256 op, 1800.00 ns, 7.0313 ns/op
+
+OverheadActual   1: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual   2: 256 op, 3700.00 ns, 14.4531 ns/op
+OverheadActual   3: 256 op, 3000.00 ns, 11.7188 ns/op
+OverheadActual   4: 256 op, 2500.00 ns, 9.7656 ns/op
+OverheadActual   5: 256 op, 4400.00 ns, 17.1875 ns/op
+OverheadActual   6: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   7: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual   8: 256 op, 2800.00 ns, 10.9375 ns/op
+OverheadActual   9: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual  10: 256 op, 3100.00 ns, 12.1094 ns/op
+OverheadActual  11: 256 op, 2100.00 ns, 8.2031 ns/op
+OverheadActual  12: 256 op, 2600.00 ns, 10.1563 ns/op
+OverheadActual  13: 256 op, 4500.00 ns, 17.5781 ns/op
+OverheadActual  14: 256 op, 2100.00 ns, 8.2031 ns/op
+OverheadActual  15: 256 op, 38600.00 ns, 150.7813 ns/op
+OverheadActual  16: 256 op, 2400.00 ns, 9.3750 ns/op
+OverheadActual  17: 256 op, 2700.00 ns, 10.5469 ns/op
+OverheadActual  18: 256 op, 7000.00 ns, 27.3438 ns/op
+OverheadActual  19: 256 op, 4300.00 ns, 16.7969 ns/op
+OverheadActual  20: 256 op, 3500.00 ns, 13.6719 ns/op
+
+
+// BeforeActualRun
+WorkloadActual   1: 256 op, 817661600.00 ns, 3.1940 ms/op
+WorkloadActual   2: 256 op, 769999700.00 ns, 3.0078 ms/op
+WorkloadActual   3: 256 op, 962492800.00 ns, 3.7597 ms/op
+WorkloadActual   4: 256 op, 1403795200.00 ns, 5.4836 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 256 op, 817658850.00 ns, 3.1940 ms/op
+WorkloadResult   2: 256 op, 769996950.00 ns, 3.0078 ms/op
+WorkloadResult   3: 256 op, 962490050.00 ns, 3.7597 ms/op
+WorkloadResult   4: 256 op, 1403792450.00 ns, 5.4836 ms/op
+
+// AfterAll
+// Benchmark Process 37284 has exited with code 0.
+
+Mean = 4.899 ms, StdErr = 0.208 ms (4.25%), N = 40, StdDev = 1.316 ms
+Min = 2.879 ms, Q1 = 3.974 ms, Median = 4.748 ms, Q3 = 5.522 ms, Max = 7.573 ms
+IQR = 1.548 ms, LowerFence = 1.653 ms, UpperFence = 7.844 ms
+ConfidenceInterval = [4.159 ms; 5.639 ms] (CI 99.9%), Margin = 0.740 ms (15.11% of Mean)
+Skewness = 0.37, Kurtosis = 2.2, MValue = 3.71
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-09-08 22:45 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\For_vs_foreach.BenchMarkClass-report.csv
+  BenchmarkDotNet.Artifacts\results\For_vs_foreach.BenchMarkClass-report-github.md
+  BenchmarkDotNet.Artifacts\results\For_vs_foreach.BenchMarkClass-report.html
+
+// * Detailed results *
+BenchMarkClass.MeasureA1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 52.033 ms, StdErr = 1.572 ms (3.02%), N = 40, StdDev = 9.944 ms
+Min = 33.247 ms, Q1 = 44.574 ms, Median = 52.979 ms, Q3 = 59.918 ms, Max = 71.017 ms
+IQR = 15.344 ms, LowerFence = 21.557 ms, UpperFence = 82.934 ms
+ConfidenceInterval = [46.439 ms; 57.627 ms] (CI 99.9%), Margin = 5.594 ms (10.75% of Mean)
+Skewness = -0.15, Kurtosis = 1.93, MValue = 2.77
+-------------------- Histogram --------------------
+[29.431 ms ; 38.168 ms) | @@@
+[38.168 ms ; 45.801 ms) | @@@@@@@@@@
+[45.801 ms ; 52.741 ms) | @@@@@
+[52.741 ms ; 60.373 ms) | @@@@@@@@@@@@@
+[60.373 ms ; 67.530 ms) | @@@@@@@@
+[67.530 ms ; 74.834 ms) | @
+---------------------------------------------------
+
+BenchMarkClass.MeasureA2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 124.778 ms, StdErr = 2.084 ms (1.67%), N = 38, StdDev = 12.844 ms
+Min = 99.167 ms, Q1 = 115.940 ms, Median = 130.452 ms, Q3 = 134.898 ms, Max = 140.950 ms
+IQR = 18.958 ms, LowerFence = 87.502 ms, UpperFence = 163.336 ms
+ConfidenceInterval = [117.332 ms; 132.224 ms] (CI 99.9%), Margin = 7.446 ms (5.97% of Mean)
+Skewness = -0.72, Kurtosis = 2.11, MValue = 2.32
+-------------------- Histogram --------------------
+[ 97.814 ms ; 107.843 ms) | @@@@@@
+[107.843 ms ; 115.684 ms) | @@@
+[115.684 ms ; 125.713 ms) | @@@@@@@@
+[125.713 ms ; 138.791 ms) | @@@@@@@@@@@@@@@@@@@
+[138.791 ms ; 145.965 ms) | @@
+---------------------------------------------------
+
+BenchMarkClass.MeasureB1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 13.010 ms, StdErr = 0.379 ms (2.91%), N = 37, StdDev = 2.306 ms
+Min = 8.551 ms, Q1 = 11.018 ms, Median = 13.425 ms, Q3 = 14.896 ms, Max = 17.083 ms
+IQR = 3.878 ms, LowerFence = 5.200 ms, UpperFence = 20.714 ms
+ConfidenceInterval = [11.652 ms; 14.368 ms] (CI 99.9%), Margin = 1.358 ms (10.44% of Mean)
+Skewness = -0.13, Kurtosis = 1.76, MValue = 3.13
+-------------------- Histogram --------------------
+[ 8.403 ms ; 10.238 ms) | @@@@
+[10.238 ms ; 12.054 ms) | @@@@@@@@@@@@
+[12.054 ms ; 13.798 ms) | @@@
+[13.798 ms ; 16.168 ms) | @@@@@@@@@@@@@@@@
+[16.168 ms ; 17.991 ms) | @@
+---------------------------------------------------
+
+BenchMarkClass.MeasureB2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 8.220 ms, StdErr = 0.253 ms (3.08%), N = 39, StdDev = 1.580 ms
+Min = 5.849 ms, Q1 = 6.989 ms, Median = 7.768 ms, Q3 = 9.365 ms, Max = 11.764 ms
+IQR = 2.376 ms, LowerFence = 3.425 ms, UpperFence = 12.929 ms
+ConfidenceInterval = [7.318 ms; 9.122 ms] (CI 99.9%), Margin = 0.902 ms (10.97% of Mean)
+Skewness = 0.59, Kurtosis = 2.3, MValue = 3.2
+-------------------- Histogram --------------------
+[ 5.237 ms ;  6.648 ms) | @@@@@@@
+[ 6.648 ms ;  7.871 ms) | @@@@@@@@@@@@@@@
+[ 7.871 ms ;  8.323 ms) | 
+[ 8.323 ms ;  9.546 ms) | @@@@@@@@@
+[ 9.546 ms ; 10.695 ms) | @@@@
+[10.695 ms ; 11.993 ms) | @@@@
+---------------------------------------------------
+
+BenchMarkClass.MeasureC1: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 4.130 ms, StdErr = 0.146 ms (3.54%), N = 38, StdDev = 0.901 ms
+Min = 3.046 ms, Q1 = 3.394 ms, Median = 3.868 ms, Q3 = 4.755 ms, Max = 6.472 ms
+IQR = 1.362 ms, LowerFence = 1.352 ms, UpperFence = 6.798 ms
+ConfidenceInterval = [3.607 ms; 4.652 ms] (CI 99.9%), Margin = 0.522 ms (12.65% of Mean)
+Skewness = 0.84, Kurtosis = 2.59, MValue = 3.11
+-------------------- Histogram --------------------
+[2.694 ms ; 3.141 ms) | @
+[3.141 ms ; 3.844 ms) | @@@@@@@@@@@@@@@@@@
+[3.844 ms ; 4.556 ms) | @@@@@@@@@
+[4.556 ms ; 4.833 ms) | 
+[4.833 ms ; 5.537 ms) | @@@@@@@
+[5.537 ms ; 5.805 ms) | 
+[5.805 ms ; 6.508 ms) | @@@
+---------------------------------------------------
+
+BenchMarkClass.MeasureC2: Job-DZACBK(IterationCount=4, LaunchCount=10, WarmupCount=0)
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 4.899 ms, StdErr = 0.208 ms (4.25%), N = 40, StdDev = 1.316 ms
+Min = 2.879 ms, Q1 = 3.974 ms, Median = 4.748 ms, Q3 = 5.522 ms, Max = 7.573 ms
+IQR = 1.548 ms, LowerFence = 1.653 ms, UpperFence = 7.844 ms
+ConfidenceInterval = [4.159 ms; 5.639 ms] (CI 99.9%), Margin = 0.740 ms (15.11% of Mean)
+Skewness = 0.37, Kurtosis = 2.2, MValue = 3.71
+-------------------- Histogram --------------------
+[2.814 ms ; 3.824 ms) | @@@@@@@@@@
+[3.824 ms ; 4.383 ms) | @@@@
+[4.383 ms ; 5.393 ms) | @@@@@@@@@@@@@@
+[5.393 ms ; 6.419 ms) | @@@@@@
+[6.419 ms ; 6.761 ms) | 
+[6.761 ms ; 7.771 ms) | @@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
+Intel Core i3-8145U CPU 2.10GHz (Whiskey Lake), 1 CPU, 4 logical and 2 physical cores
+.NET SDK 8.0.401
+  [Host]     : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+  Job-DZACBK : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+
+IterationCount=4  LaunchCount=10  WarmupCount=0  
+
+| Method    | Mean       | Error     | StdDev     | Median     |
+|---------- |-----------:|----------:|-----------:|-----------:|
+| MeasureA1 |  52.033 ms | 5.5942 ms |  9.9436 ms |  52.979 ms |
+| MeasureA2 | 124.778 ms | 7.4461 ms | 12.8442 ms | 130.452 ms |
+| MeasureB1 |  13.010 ms | 1.3581 ms |  2.3061 ms |  13.425 ms |
+| MeasureB2 |   8.220 ms | 0.9020 ms |  1.5797 ms |   7.768 ms |
+| MeasureC1 |   4.130 ms | 0.5224 ms |  0.9010 ms |   3.868 ms |
+| MeasureC2 |   4.899 ms | 0.7402 ms |  1.3156 ms |   4.748 ms |
+
+// * Warnings *
+MultimodalDistribution
+  BenchMarkClass.MeasureB1: IterationCount=4, LaunchCount=10, WarmupCount=0 -> It seems that the distribution can have several modes (mValue = 3.13)
+  BenchMarkClass.MeasureB2: IterationCount=4, LaunchCount=10, WarmupCount=0 -> It seems that the distribution can have several modes (mValue = 3.2)
+  BenchMarkClass.MeasureC1: IterationCount=4, LaunchCount=10, WarmupCount=0 -> It seems that the distribution can have several modes (mValue = 3.11)
+  BenchMarkClass.MeasureC2: IterationCount=4, LaunchCount=10, WarmupCount=0 -> It seems that the distribution is bimodal (mValue = 3.71)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:35:58 (2158.37 sec), executed benchmarks: 6
+
+Global total time: 00:36:16 (2176.73 sec), executed benchmarks: 6
+// * Artifacts cleanup *
+Artifacts cleanup is finished

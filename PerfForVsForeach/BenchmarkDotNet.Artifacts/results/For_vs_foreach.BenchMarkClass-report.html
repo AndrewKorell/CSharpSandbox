@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>For_vs_foreach.BenchMarkClass-20240908-220947</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4037/23H2/2023Update/SunValley3)
+Intel Core i3-8145U CPU 2.10GHz (Whiskey Lake), 1 CPU, 4 logical and 2 physical cores
+.NET SDK 8.0.401
+  [Host]     : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+  Job-DZACBK : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>IterationCount=4  LaunchCount=10  WarmupCount=0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>MeasureA1</td><td>52.033 ms</td><td>5.5942 ms</td><td>9.9436 ms</td><td>52.979 ms</td>
+</tr><tr><td>MeasureA2</td><td>124.778 ms</td><td>7.4461 ms</td><td>12.8442 ms</td><td>130.452 ms</td>
+</tr><tr><td>MeasureB1</td><td>13.010 ms</td><td>1.3581 ms</td><td>2.3061 ms</td><td>13.425 ms</td>
+</tr><tr><td>MeasureB2</td><td>8.220 ms</td><td>0.9020 ms</td><td>1.5797 ms</td><td>7.768 ms</td>
+</tr><tr><td>MeasureC1</td><td>4.130 ms</td><td>0.5224 ms</td><td>0.9010 ms</td><td>3.868 ms</td>
+</tr><tr><td>MeasureC2</td><td>4.899 ms</td><td>0.7402 ms</td><td>1.3156 ms</td><td>4.748 ms</td>
+</tr></tbody></table>
+</body>
+</html>

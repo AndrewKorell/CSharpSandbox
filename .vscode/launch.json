@@ -31,6 +31,12 @@
         "type": "dotnet",
         "request": "launch",
         "projectPath": "${workspaceFolder}/TestPokerHands/TestPokerHands.csproj"
-    },   
+    },
+    {
+        "name": "C#: Performance For vs Foreach Debug",
+        "type": "dotnet",
+        "request": "launch",
+        "projectPath": "${workspaceFolder}/PerForVsForeach/PerfForVsForeach.csproj"
+    },      
   ]
 }

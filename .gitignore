@@ -1,16 +1,3 @@
 
-/ConsoleApp1/bin
-/TestDelegates/bin
-/TestDelegates/obj
-/TestEvent/obj
-/TestGenerics/obj
-/TestLambda/obj
-/TestLinq/bin
-/TestLinq/obj
-/TestPokerHands/bin
-/TestPokerHands/obj
-/TestPokerHandTests/bin
-/TestPokerHandTests/obj
-/TestTemplate/obj
-/YeildTest/obj
-/ConsoleApp1/obj
+/*/bin
+/*/obj
